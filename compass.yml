@@ -1,0 +1,18 @@
+name: loancraft
+id: ari:cloud:compass:d74e2c72-d73a-42cf-afdd-b52f0ebfed0c:component/d33d12db-01f8-415d-9f33-4c60fe378969/7e8e86b5-bc77-4d1d-b81d-e474f9555755
+description: null
+configVersion: 1
+typeId: WEBSITE
+ownerId: ari:cloud:identity::team/5c41e4c5-30dc-4672-8ef5-b23c4e2d0bcc
+fields:
+  tier: 4
+links:
+  - name: null
+    type: REPOSITORY
+    url: https://github.com/Paygeon/loancraft
+relationships:
+  DEPENDS_ON: []
+labels:
+  - language:typescript
+  - source:github
+customFields: null
