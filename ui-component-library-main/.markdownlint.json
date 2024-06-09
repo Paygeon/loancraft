@@ -1,0 +1,7 @@
+{
+	"no-hard-tabs": { "code_blocks": false },
+	"no-inline-html": false,
+	"first-line-heading": false,
+	"line_length": false,
+	"single-title": false
+}

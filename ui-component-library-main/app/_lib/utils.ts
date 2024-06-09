@@ -1,0 +1,136 @@
+// Purpose: This file contains all 'general' helper functions.
+
+// Import Types
+// Import External Packages
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+import { toast } from 'sonner';
+// Import Components
+// Import Functions & Actions & Hooks & State
+// Import Data
+// Import Assets & Icons
+
+/**
+ * The e=mc^2 of Tailwind. Combines multiple class names into a single string.
+ *
+ * @param inputs - The class names to be combined.
+ * @returns The combined class names as a string.
+ */
+export function cn(...inputs: ClassValue[]) {
+	return twMerge(clsx(inputs));
+}
+
+/**
+ * Copies the given string to the clipboard.
+ *
+ * @param str - The string to be copied.
+ */
+export function CopyToClipboard(str: string | undefined) {
+	if (!str) return;
+	navigator.clipboard
+		.writeText(str)
+		.then(() => {
+			toast.success('String has been copied!');
+		})
+		.catch((err) => {
+			toast.error('Error copying string. Try again please!', err);
+		});
+}
+
+/**
+ * Provides a background image URL based on a predefined pattern.
+ * @param pattern - The name of the pattern ['blueprint', 'boxes-sm', 'boxes-md', 'boxes-lg', 'dotted', 'hearts'] chosen to convert.
+ * @returns The background image URL for the given pattern.
+ */
+export const backgroundPattern = (pattern: string): string => {
+	let svg: string;
+
+	switch (pattern) {
+		case 'blueprint':
+			svg =
+				'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="8" height="8" fill="#3399cc" stroke="#fff"><path d="M0 0H32V32H0V0Z"/></svg>';
+			break;
+		case 'boxes-sm':
+			svg =
+				'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="8" height="8" fill="none" stroke="#808080"><path d="M0 0H32V32"/></svg>';
+			break;
+		case 'boxes-md':
+			svg =
+				'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="#808080"><path d="M0 0H32V32"/></svg>';
+			break;
+		case 'boxes-lg':
+			svg =
+				'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="#808080"><path d="M0 0H32V32"/></svg>';
+			break;
+
+		case 'dotted':
+			svg =
+				'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="8" height="8" fill="#808080"><circle cx="16" cy="16" r="2" /></svg>';
+			break;
+		case 'hearts':
+			svg =
+				'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="32" height="32" fill="red" stroke="#808080"><path d="M140 20C73 20 20 74 20 140c0 135 136 170 228 303 88-132 229-173 229-303 0-66-54-120-120-120-48 0-90 28-109 69-19-41-60-69-108-69z"/></svg>';
+			break;
+		default:
+			svg =
+				'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="8" height="8" fill="#3399cc" stroke="#fff"><path d="M0 0H32V32H0V0Z"/></svg>';
+	}
+
+	return `url("data:image/svg+xml;utf8,${encodeURIComponent(svg)}")`;
+};
+
+/**
+ * Parses headers from an MDX string, e.g. for a Table Of Contents component.
+ * Goes 6 levels deep, e.g. 1.1.1.1.1.1.
+ * If you need more ... consider changing your formatting style - nobody should go deeper than 6 levels of headers!!! :)
+ * Alternatively, change the below 6 to some higher number! ;)
+ * @param mdxContent The MDX content to parse headers from.
+ * @returns An array of header objects containing the level, title, and slug.
+ */
+export function parseHeadersFromMDXString(mdxContent: string) {
+	const headerRegex = /(?:\n|^) *(#{1,6}) +([^\n]+?)(?:\n|$)/g;
+	const headers: {
+		level: number;
+		title: string;
+		slug: string;
+	}[] = [];
+
+	let match;
+	while ((match = headerRegex.exec(mdxContent)) !== null) {
+		const level = match[1].length;
+		const title = match[2].trim();
+		const slug = stringToSlug(title);
+
+		headers.push({ level, title, slug });
+	}
+	return headers;
+}
+
+/**
+ * Converts a string to a slug.
+ * Replaces non-word characters and underscores with spaces,
+ * splits the string into an array of words, and joins them with hyphens.
+ * Finally, converts the resulting string to lowercase.
+ *
+ * @param string - The string to convert to a slug, such as 'This is a Header!'.
+ * @returns The slugified string, such as this-is-a-header.
+ */
+export function stringToSlug(string: string) {
+	return string
+		.toString()
+		.replace(/[\W_]+/g, ' ')
+		.split(' ')
+		.join('-')
+		.toLowerCase();
+}
+
+/**
+ * Capitalizes the first letter of a string.
+ *
+ * @param str - The string to capitalize.
+ * @returns The capitalized string.
+ */
+export function capitalize(str: string) {
+	if (!str || typeof str !== 'string') return str;
+	return str.charAt(0).toUpperCase() + str.slice(1);
+}

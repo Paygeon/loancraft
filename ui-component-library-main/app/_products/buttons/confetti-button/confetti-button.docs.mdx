@@ -1,0 +1,264 @@
+---
+componentName: Confetti Button
+category: buttons
+slug: confetti-button
+shortDescription: "This button makes confetti rain!"
+longDescription: "Beautifully designed button that makes it rain confetti!"
+hasImage: true
+imageUrl: /img/products/confetti-button.png
+imageAlt: Confetti Button | lendingstack
+hasComponentCode: true
+tags: ['Click-Effect']
+techStack: ['React', 'Tailwind', 'shadcn/ui']
+examples: [{nameOfPage: 'lendingstack', urlToPage: 'https://lendingstack.com', descriptionOfUsage: 'lendingstack is using the confetti effect after someone made a purchase!', imgageSrcOfUsage: ''}]
+faq: [{question: 'Can it make fireworks, too?', answer: 'No, it is a CONFETTI button...'}]
+metaDescription: "Beautifully designed button that makes it rain confetti!"
+metaTitle: "Confetti Button"
+license: MIT
+---
+
+<SubSectionOuterContainer id="Docs">
+<SubSectionTitle>Step-By-Step Guide</SubSectionTitle>
+<SubSectionInnerContainer  className="border-l-2 border-gray-300 space-y-12 max-w-5xl mt-4 px-1 pl-10 items-start overflow-x-hidden">
+<HowToStep index='1' title="Install Dependencies">
+
+Toast by Sonner - Follow instructions by [shadcn/ui - toast](https://ui.shadcn.com/docs/components/toast)
+
+<CodeBlock fileName="cli">
+
+```bash
+npm install sonner
+```
+
+</CodeBlock>
+
+Button component by [shadcn/ui - button](https://ui.shadcn.com/docs/components/button)
+
+<CodeBlock fileName="cli">
+```bash
+npx shadcn-ui@latest add button
+```
+</CodeBlock>
+
+</HowToStep>
+<HowToStep index='2' title="Copy the Source Code">
+Confetti
+<CodeBlock fileName="@/ui/Confetti.tsx">
+
+```tsx
+'use client';
+
+// Credit to: lendingstack.com
+// Import Types
+// Import External Packages
+import { useEffect, useRef } from 'react';
+// Import Components
+// Import Functions & Actions & Hooks & State
+// Import Data
+// Import Assets & Icons
+
+interface ConfettiParticle {
+	color: string; // RGB color string
+	x: number; // x-position
+	y: number; // y-position
+	diameter: number; // Size of the particle
+	tilt: number; // Tilt angle
+	tiltAngleIncrement: number; // Tilt angle increment per frame
+	tiltAngle: number; // Current tilt angle
+	particleSpeed: number; // Speed of the particle
+	waveAngle: number; // Angle for the wave movement
+	waveAngleIncrement: number; // Wave angle increment per frame
+	opacity: number; // Opacity of the particle
+}
+
+const generateConfettiParticles = (count: number): ConfettiParticle[] => {
+	const particles: ConfettiParticle[] = [];
+	for (let i = 0; i < count; i++) {
+		particles.push({
+			color: `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`,
+			x: Math.random() * window.innerWidth,
+			y: Math.random() * window.innerHeight - window.innerHeight,
+			diameter: Math.random() * 10 + 1,
+			tilt: Math.random() * 10 - 10,
+			tiltAngleIncrement: Math.random() * 0.07 + 0.05,
+			tiltAngle: 0,
+			particleSpeed: Math.random() * 10 + 1,
+			waveAngle: 0,
+			waveAngleIncrement: Math.random() * 0.1 + 0.05,
+			opacity: 1,
+		});
+	}
+	return particles;
+};
+
+const updateConfettiParticles = (
+	particles: ConfettiParticle[],
+	duration: number
+): ConfettiParticle[] => {
+	const opacityDecrement = 1 / (60 * (duration / 1000));
+	return particles
+		.map((particle) => ({
+			...particle,
+			x: particle.x + Math.sin(particle.waveAngle) * 2, // Horizontal movement
+			y: particle.y + particle.particleSpeed, // Vertical movement due to gravity
+			tiltAngle: particle.tiltAngle + particle.tiltAngleIncrement,
+			tilt: particle.tilt + Math.sin(particle.tiltAngle) * 12, // Tilt
+			waveAngle: particle.waveAngle + particle.waveAngleIncrement, // Wave movement
+			opacity: Math.max(0, particle.opacity - opacityDecrement),
+		}))
+		.filter((particle) => particle.y < window.innerHeight); // Keep particles within the canvas
+};
+
+/**
+ * Renders a confetti animation on a canvas element.
+ * @param isActive - Determines whether the confetti animation is active.
+ * @param duration - The duration of the confetti animation in milliseconds.
+ * @returns The Confetti component.
+ */
+export default function Confetti({
+	isActive,
+	duration,
+}: {
+	isActive: boolean;
+	duration: number;
+}) {
+	const canvasRef = useRef<HTMLCanvasElement>(null);
+
+	useEffect(() => {
+		if (!isActive || !canvasRef.current) return;
+
+		const canvas = canvasRef.current;
+		const ctx = canvas.getContext('2d');
+		if (!ctx) return;
+
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+
+		let particles = generateConfettiParticles(1000);
+		let animationFrameId: number;
+
+		const animate = () => {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			particles = updateConfettiParticles(particles, duration);
+
+			// Draw particles
+			particles.forEach((particle) => {
+				ctx.beginPath();
+				ctx.arc(particle.x, particle.y, particle.diameter / 2, 0, 2 * Math.PI);
+				ctx.fillStyle = particle.color;
+				ctx.globalAlpha = particle.opacity;
+				ctx.fill();
+			});
+			ctx.globalAlpha = 1;
+
+			animationFrameId = requestAnimationFrame(animate);
+		};
+
+		animate();
+
+		const timeoutId = setTimeout(() => {
+			cancelAnimationFrame(animationFrameId);
+		}, duration);
+
+		return () => {
+			clearTimeout(timeoutId);
+			cancelAnimationFrame(animationFrameId);
+		};
+	}, [isActive, duration]);
+
+	return (
+		<canvas
+			ref={canvasRef}
+			className="h-lvh w-full absolute"
+			style={{
+				pointerEvents: 'none',
+				zIndex: 9999,
+			}}
+		/>
+	);
+}
+
+```
+
+</CodeBlock>
+Button
+<CodeBlock fileName="@/component/ConfettiButton.tsx">
+
+```tsx
+'use client';
+
+// Import Types
+// Import External Packages
+import { useState } from 'react';
+import { toast } from 'sonner';
+// Import Components
+import { Button } from '@/ui/Button';
+import Confetti from '@/ui/Confetti';
+// Import Functions & Actions & Hooks & State
+// Import Data
+// Import Assets & Icons
+
+export default function ConfettiButton() {
+	const [isConfettiActive, setIsConfettiActive] = useState(false);
+	return (
+		<>
+			<Button
+				onClick={() => {
+					toast.success(
+						'Oh WOW! You actually clicked the button! See ... it is well-designed! As gratitude, enjoy some confetti. 🎉'
+					);
+
+					setTimeout(() => {
+						setIsConfettiActive(true);
+					}, 3000);
+
+					setTimeout(() => {
+						setIsConfettiActive(false);
+					}, 6000);
+				}}
+				variant="default"
+				size="lg"
+				className="hover:bg-primary/80 animate-pulse shadow-2xl shadow-neutral-500"
+			>
+				Click Me
+			</Button>
+			<Confetti isActive={isConfettiActive} duration={3000} />
+		</>
+	);
+}
+```
+
+</CodeBlock>
+</HowToStep>
+<HowToStep index='3' title="Use in your App">
+<CodeBlock fileName="page.tsx">
+
+```tsx
+export default function Page() {
+	return (
+		<div className='relative dark:bg-black max-w-5xl mx-auto'>
+			<div className="mx-auto max-w-7xl py-16">
+				<div className="mx-auto text-center">
+					<h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl max-w-2xl mx-auto">
+						Buttons Rule The World
+					</h1>
+
+					<p className="mt-6 text-lg leading-8 text-muted-foreground dark:text-zinc-200 max-w-4xl mx-auto">
+						We knead the code and bake the pixels to perfection to serve you the
+						most delightful online buttons - LIKE, SUBMIT, and everything in
+						between.
+					</p>
+					<div className="mt-10 flex items-center justify-center gap-x-6">
+						<ConfettiButton />
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+}
+```
+
+</CodeBlock>
+</HowToStep>
+</SubSectionInnerContainer>
+</SubSectionOuterContainer>

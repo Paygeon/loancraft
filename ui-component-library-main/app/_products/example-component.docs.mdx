@@ -1,0 +1,65 @@
+---
+componentName: EXAMPLE NAME | Display Name -> No ":" 
+category: CATEGORY NAME | Needs to be one of your CATEGORIES defined in /constants
+slug: PRODUCT SLUG | A UNIQUE slug, no spaces like "component-name-2"
+shortDescription: "SOME SHORT DESCRIPTION"
+longDescription: "SOME LONG DESCRIPTION"
+hasImage: false/true | Boolean -> Add imageURL AND imageALT if TRUE!
+imageUrl: /img/products/running-wall.png | The PATH to your Product Picture stored in /public{PATH}
+imageAlt: Running Wall Component | Some alt text for your image
+hasComponentCode: false/true | Boolean -> Add (slug).tsx into product folder if TRUE, and replace (slug with above slug)
+tags: Array of tags like "['TAG1', 'Tag2']" -> will be used to sort. If none given -> "['Other']"
+techStack: Array of tags like "['NextJS', 'Tailwind']" -> Should be inline with your TechStack in /constants/techstack.js
+examples: "Array of objects like - [{nameOfPage: 'SOME WEBSITE', urlToPage: 'https://SOMEURL.com', descriptionOfUsage: 'SOME DESCRIPTION ABOUT HOW WEBSITES USES PRODZC', imgageSrcOfUsage: 'The PATH to your Website Picture stored in /public{PATH}'}]"
+faq: "Array of objects like [{question: 'QUESTION1', answer: 'ANSWER1'},{question: 'QUESTION2', answer: 'ANSWER2'}]"
+metaDescription: "SOME META DESCRIPTION - MAX 155"
+metaTitle: "SOME META TITLE - MAX 60 CHARS"
+license: MIT  <- Add your actual license to /(public)/license and add an id like id="Standard"
+---
+
+<SubSectionOuterContainer id="Docs">
+<SubSectionTitle>Step-By-Step Guide</SubSectionTitle>
+<SubSectionInnerContainer  className="border-l-2 border-gray-300 space-y-12 max-w-5xl mt-4 px-1 pl-10 items-start overflow-x-hidden">
+<HowToStep index='1' title="Install Dependencies">
+
+Icons by Lucide. But you can use any or none.
+
+<CodeBlock fileName="cli">
+
+```bash
+npm install lucide-react
+```
+
+</CodeBlock>
+
+Button component by [shadcn/ui](https://ui.shadcn.com/docs/components/button)
+
+<CodeBlock fileName="cli">
+```bash
+npx shadcn-ui@latest add button
+```
+</CodeBlock>
+
+Copy the function 'cn'. Link -> [cn Function](https://lendingstack.com/functions/cn)
+
+</HowToStep>
+<HowToStep index='2' title="Copy the Source Code">
+<CodeBlock fileName="@/component/button-back-to-top.tsx">
+
+```tsx
+
+```
+
+</CodeBlock>
+</HowToStep>
+<HowToStep index='3' title="Use in your App">
+<CodeBlock fileName="page.tsx">
+
+```tsx
+
+```
+
+</CodeBlock>
+</HowToStep>
+</SubSectionInnerContainer>
+</SubSectionOuterContainer>

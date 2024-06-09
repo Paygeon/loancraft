@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"],
+      "@/components/*": ["app/_components/*"],
+      "@/ui/*": ["app/_components/_ui/*"],
+      "@/app/*": ["app/*"],
+      "@/lib/*": ["app/_lib/*"],
+      "@/utils": ["app/_lib/utils"],
+      "@/state/*": ["app/_state/*"],
+      "@/types": ["app/_types/types"],
+      "@/constants": ["app/_constants/constants"],
+      "@/registry": ["app/_registry/productRegistry.json"],
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "ignore"]
+}

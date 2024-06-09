@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /account
+Allow: /api/og/*
+
+Sitemap: https://YOUR-COMPANY-URL.com/sitemap.xml
