@@ -25,7 +25,7 @@ export default function Home() {
 			<Hero />
 			<Breaker_LG_3Features features={CATEGORIES_DESC} />
 			<Suspense>
-				<CategoryOverview categoryName="buttons" />
+				<CategoryOverview categoryName="components" />
 			</Suspense>
 			<BreakerWithIcons />
 			<FAQ faqs={GENERAL_FAQS} className="text-center max-w-3xl mt-8" />
