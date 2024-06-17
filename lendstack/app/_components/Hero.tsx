@@ -850,7 +850,7 @@ export default function Hero({ className }: { className?: string }) {
                         className="token comment style-E2Fjv"
                         id="style-E2Fjv"
                       >
-                        // Take the code & drop it{' '}
+                        {' '}
                       </span>
                       <span className="token plain" />
                     </div>
@@ -866,7 +866,7 @@ export default function Hero({ className }: { className?: string }) {
                         className="token comment style-jvEeP"
                         id="style-jvEeP"
                       >
-                        // into your project!
+                      
                       </span>
                       <span className="token plain" />
                     </div>
@@ -1027,7 +1027,7 @@ export default function Hero({ className }: { className?: string }) {
                         className="token tag attr-value punctuation style-oNKMd"
                         id="style-oNKMd"
                       >
-                        "
+                        `&quot;`
                       </span>
                       <span
                         className="token tag attr-value style-Mwvm8"
@@ -1039,7 +1039,7 @@ export default function Hero({ className }: { className?: string }) {
                         className="token tag attr-value punctuation style-laXrI"
                         id="style-laXrI"
                       >
-                        "
+                       `&quot;`
                       </span>
                       <span
                         className="token tag punctuation style-BDZbd"
