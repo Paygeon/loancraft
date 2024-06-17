@@ -1,0 +1,154 @@
+{
+  "components": [
+    {
+      "componentName": "Confetti Button",
+      "category": "components",
+      "slug": "confetti-button",
+      "shortDescription": "This button makes confetti rain!",
+      "longDescription": "Beautifully designed button that makes it rain confetti!",
+      "hasImage": true,
+      "imageUrl": "/img/products/confetti-button.png",
+      "imageAlt": "Confetti Button | lendingstack",
+      "hasComponentCode": true,
+      "tags": [
+        "Click-Effect"
+      ],
+      "techStack": [
+        "React",
+        "Tailwind",
+        "shadcn/ui"
+      ],
+      "examples": [
+        {
+          "nameOfPage": "lendingstack",
+          "urlToPage": "https://lendingstack.com",
+          "descriptionOfUsage": "lendingstack is using the confetti effect after someone made a purchase!",
+          "imgageSrcOfUsage": ""
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can it make fireworks, too?",
+          "answer": "No, it is a CONFETTI button..."
+        }
+      ],
+      "metaDescription": "Beautifully designed button that makes it rain confetti!",
+      "metaTitle": "Confetti Button",
+      "license": "MIT",
+      "productLine": "components"
+    },
+    {
+      "componentName": "Neopop Credit Card",
+      "category": "components",
+      "slug": "neopop-credit-card",
+      "shortDescription": "Credit card inspired by Cred!",
+      "longDescription": "Beautifully designed credit card from the popular indian fintech company CRED.CLUB!",
+      "hasImage": true,
+      "imageUrl": "/img/products/neopop-credit-card.png",
+      "imageAlt": "Neopop Credit Card | lendingstack",
+      "hasComponentCode": true,
+      "tags": [
+        "Credit-Card"
+      ],
+      "techStack": [
+        "React 18",
+        "CSS3",
+        "TypeScript"
+      ],
+      "examples": [
+        {
+          "nameOfPage": "lendingstack",
+          "urlToPage": "https://lendingstack.com",
+          "descriptionOfUsage": "lendingstack is using the confetti effect after someone made a purchase!",
+          "imgageSrcOfUsage": ""
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can it make fireworks, too?",
+          "answer": "No, it is a CONFETTI button..."
+        }
+      ],
+      "metaDescription": "Beautifully designed credit card from CRED.CLUB!",
+      "metaTitle": "Neopop Credit Card",
+      "license": "MIT",
+      "productLine": "components"
+    },
+    {
+      "componentName": "Tilted Shimmer Button",
+      "category": "components",
+      "slug": "tilted-shimmer-button",
+      "shortDescription": "Its shimmering golden hue exudes a sense of grandeur and prestige, making it a standout element on any platform.",
+      "longDescription": "The Golden Shimmer Tilted Button is a testament to opulence and sophistication, designed to elevate any digital interface with its radiant allure. This component embodies the essence of luxury, crafted with meticulous attention to detail and a passion for exquisite design.",
+      "hasImage": true,
+      "imageUrl": "/img/products/shimmer-button.gif",
+      "imageAlt": "Shimmer Button | lendingstack",
+      "hasComponentCode": true,
+      "tags": [
+        "Click-Effect"
+      ],
+      "techStack": [
+        "React",
+        "CSS3",
+        "shadcn/ui"
+      ],
+      "examples": [
+        {
+          "nameOfPage": "lendingstack",
+          "urlToPage": "https://lendingstack.com",
+          "descriptionOfUsage": "lendingstack is using the confetti effect after someone made a purchase!",
+          "imgageSrcOfUsage": ""
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can it make fireworks, too?",
+          "answer": "No, it is a CONFETTI button..."
+        }
+      ],
+      "metaDescription": "Beautifully designed button that makes it rain confetti!",
+      "metaTitle": "Confetti Button",
+      "license": "MIT",
+      "productLine": "components"
+    }
+  ],
+  "fintech": [
+    {
+      "componentName": "Loan Application",
+      "category": "fintech",
+      "slug": "loan-application",
+      "shortDescription": "Fintech loan application",
+      "longDescription": "Beautifully designed custom loan application for brokers, consultants, & B2B companies. Everything works outside the box after setup!",
+      "hasImage": false,
+      "imageUrl": "/img/products/loan-application.png",
+      "imageAlt": "Loan Application | lendingstack",
+      "hasComponentCode": false,
+      "tags": [
+        "Lenders"
+      ],
+      "techStack": [
+        "React",
+        "Tailwind",
+        "shadcn/ui"
+      ],
+      "examples": [
+        {
+          "nameOfPage": "lendingstack",
+          "urlToPage": "https://lendingstack.com",
+          "descriptionOfUsage": "lendingstack is using the confetti effect after someone made a purchase!",
+          "imgageSrcOfUsage": ""
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can it make fireworks, too?",
+          "answer": "No, it is a CONFETTI button..."
+        }
+      ],
+      "metaDescription": "Custom loan application for software and consulting teams!",
+      "metaTitle": "Loan Application",
+      "license": "MIT",
+      "productLine": "fintech"
+    }
+  ]
+}

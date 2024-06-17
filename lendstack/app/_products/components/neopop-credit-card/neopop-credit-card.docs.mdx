@@ -1,0 +1,325 @@
+---
+componentName: Neopop Credit Card
+category: components
+slug: neopop-credit-card
+shortDescription: "Credit card inspired by Cred!"
+longDescription: "Beautifully designed credit card from the popular indian fintech company CRED.CLUB!"
+hasImage: true
+imageUrl: /img/products/neopop-credit-card.png
+imageAlt: Neopop Credit Card | lendingstack
+hasComponentCode: true
+tags: ['Credit-Card']
+techStack: ['React 18', 'CSS3', 'TypeScript']
+examples: [{nameOfPage: 'lendingstack', urlToPage: 'https://lendingstack.com', descriptionOfUsage: 'lendingstack is using the confetti effect after someone made a purchase!', imgageSrcOfUsage: ''}]
+faq: [{question: 'Can it make fireworks, too?', answer: 'No, it is a CONFETTI button...'}]
+metaDescription: "Beautifully designed credit card from CRED.CLUB!"
+metaTitle: "Neopop Credit Card"
+license: MIT
+---
+
+<SubSectionOuterContainer id="Docs">
+<SubSectionTitle>Step-By-Step Guide</SubSectionTitle>
+<SubSectionInnerContainer  className="border-l-2 border-gray-300 space-y-12 max-w-5xl mt-4 px-1 pl-10 items-start overflow-x-hidden">
+<HowToStep index='1' title="Install Dependencies">
+
+Toast by Sonner - Follow instructions by [shadcn/ui - toast](https://ui.shadcn.com/docs/components/toast)
+
+<CodeBlock fileName="cli">
+
+```bash
+npm install sonner
+```
+
+</CodeBlock>
+
+Button component by [shadcn/ui - button](https://ui.shadcn.com/docs/components/button)
+
+<CodeBlock fileName="cli">
+```bash
+npx shadcn-ui@latest add button
+```
+</CodeBlock>
+
+</HowToStep>
+<HowToStep index='2' title="Copy the Source Code">
+Confetti
+<CodeBlock fileName="@/component/NeopopCreditCard.tsx">
+
+```tsx
+import React, { useState } from 'react';
+import './styles.css'; // assuming you have a CSS file for styles
+
+const Card: React.FC = () => {
+  return (
+    <div className="card">
+      <div className="card-content">
+        <header className="card-header">
+          <div className="card-title">
+            <h2 className="card-name">HDFC BUSINESS MONEYBACK</h2>
+            <div className="card-number">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/797c696809d4608d2d0c9a5cdc663923c2eaa6ce312e81e14511963c44492937?apiKey=aa19eef6d1f1473ba394866de3aadd86&"
+                alt="Chip icon"
+                className="card-chip"
+              />
+              <span className="card-number-text">1234 56XX XXXX 2022</span>
+            </div>
+          </div>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/df13ebd007a50a1965c689aeeb8c8db875304b5b9ab98ed4ce12652e5b59926d?apiKey=aa19eef6d1f1473ba394866de3aadd86&"
+            alt="Card logo"
+            className="card-logo"
+          />
+        </header>
+        <footer className="card-footer">
+          <div className="card-strip">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/39b5825135b1f18b365eedc87bb0add772ce323768f9010c9608bc2741507e0e?apiKey=aa19eef6d1f1473ba394866de3aadd86&"
+              alt=""
+              className="card-strip-start"
+            />
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/bbb47e78e38719f1293a167612fbe1e61a76bdfdbdee4ca2ba33cf37d76ad9d7?apiKey=aa19eef6d1f1473ba394866de3aadd86&"
+              alt=""
+              className="card-strip-end"
+            />
+          </div>
+          <div className="card-status-container">
+            <button className="card-status" onClick={toggleBottomSheet}>
+                <span className="card-status-text">Pay more</span>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/ecc0b05a8f663d59e79f625e990bef18268be3db9cf01bde057680b4fec7e0ee?apiKey=aa19eef6d1f1473ba394866de3aadd86&"
+                  alt="Right arrow icon"
+                  className="card-status-icon"
+                />
+            </button>
+            <div className="card-status-label">FULLY PAID</div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  );
+}
+
+export default Card;
+
+```
+
+</CodeBlock>
+Styles
+<CodeBlock fileName="@/styles/Styles.css">
+
+```css
+.card {
+    max-width: 351px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0;
+    color: #d2d2d2;
+    font-weight: 400;
+    overflow: auto;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    padding: 20px 20px 36px 17px;
+    border-radius: 5px;
+    background-color: #393838;
+    width: auto;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-self: start;
+  }
+  
+  .card-title {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .card-name {
+    font: 13px/123% Paygeon, sans-serif;
+    letter-spacing: 0.2px;
+    gap: 0;
+  }
+  
+  .card-number {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 130%;
+  }
+  
+  .card-chip {
+    width: 25px;
+    aspect-ratio: 3.13;
+    object-fit: auto;
+    object-position: center;
+    margin: auto 0;
+    gap: 0;
+  }
+  
+  .card-number-text {
+    font-family: Paygeon, sans-serif;
+    gap: 0;
+  }
+  
+  .card-logo {
+    width: 93px;
+    aspect-ratio: 5.88;
+    object-fit: auto;
+    object-position: center;
+    align-self: start;
+    gap: 0;
+  }
+  
+  .card-footer {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .card-strip {
+    display: flex;
+    gap: 16px;
+    margin: auto 0;
+    border-radius: 6px;
+    background: linear-gradient(
+      117deg,
+      #caced2 4.29%,
+      #fff 49.22%,
+      #c7cbcf 95.11%
+    );
+    box-shadow: -0.5px -0.5px 0 0 rgba(41, 38, 39, 0.44) inset,
+      0.5px 0.5px 0 0 #292627 inset;
+  }
+  
+  .card-strip-start {
+    width: 12px;
+    aspect-ratio: 0.4;
+    object-fit: auto;
+    object-position: center;
+    gap: 0;
+  }
+  
+  .card-strip-end {
+    width: 12px;
+    aspect-ratio: 0.6;
+    object-fit: auto;
+    object-position: center;
+    align-self: start;
+    margin-top: 10px;
+    gap: 0;
+  }
+  
+  
+  .card-status {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-left: 110px; /* Adjust this line to move the button to the right */
+    padding-bottom: 13px;
+    max-width: 177px;
+    width: 158.2px;
+    height: 65px;
+    background-color: #fff;
+    font-weight: 400;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+  }
+  
+  .card-status-action {
+    display: flex;
+    gap: 12px;
+    padding: 0px 20px;
+    font-size: 13px;
+    color: #0d0d0d;
+    letter-spacing: 0.2px;
+    line-height: 123%;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .card-status-text {
+    font-family: Paygeon, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .card-status-icon {
+    width: 19px;
+    aspect-ratio: 2.38;
+    margin-top: 20px;
+  }
+  
+  .card-status-container {
+    position: relative;
+  }
+  
+  .card-status-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 78.2px;
+    padding: 4px 39px;
+    background-color: #06c270;
+    color: #d2d2d2;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font: 10px/130% Paygeon, sans-serif;
+    z-index: 1; /* Make sure it's above the button */
+    margin-left: 110px;
+  }
+  
+  .card-status.pressed {
+    background-color: transparent;
+    border: 1px solid #ccc; /* Change to desired border color */
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2); /* Add depth effect */
+  }
+```
+
+</CodeBlock>
+</HowToStep>
+<HowToStep index='3' title="Use in your App">
+<CodeBlock fileName="page.tsx">
+
+```tsx
+export default function Page() {
+	return (
+		<div className='relative dark:bg-black max-w-5xl mx-auto'>
+			<div className="mx-auto max-w-7xl py-16">
+				<div className="mx-auto text-center">
+					<h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl max-w-2xl mx-auto">
+						Buttons Rule The World
+					</h1>
+
+					<p className="mt-6 text-lg leading-8 text-muted-foreground dark:text-zinc-200 max-w-4xl mx-auto">
+						We knead the code and bake the pixels to perfection to serve you the
+						most delightful online buttons - LIKE, SUBMIT, and everything in
+						between.
+					</p>
+					<div className="mt-10 flex items-center justify-center gap-x-6">
+						<ConfettiButton />
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+}
+```
+
+</CodeBlock>
+</HowToStep>
+</SubSectionInnerContainer>
+</SubSectionOuterContainer>

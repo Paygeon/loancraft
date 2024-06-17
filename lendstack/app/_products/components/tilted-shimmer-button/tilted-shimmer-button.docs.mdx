@@ -1,0 +1,237 @@
+---
+componentName: Tilted Shimmer Button
+category: components
+slug: tilted-shimmer-button
+shortDescription: "Its shimmering golden hue exudes a sense of grandeur and prestige, making it a standout element on any platform."
+longDescription: "The Golden Shimmer Tilted Button is a testament to opulence and sophistication, designed to elevate any digital interface with its radiant allure. This component embodies the essence of luxury, crafted with meticulous attention to detail and a passion for exquisite design."
+hasImage: true
+imageUrl: /img/products/shimmer-button.gif
+imageAlt: Shimmer Button | lendingstack
+hasComponentCode: true
+tags: ['Click-Effect']
+techStack: ['React', 'CSS3', 'shadcn/ui']
+examples: [{nameOfPage: 'lendingstack', urlToPage: 'https://lendingstack.com', descriptionOfUsage: 'lendingstack is using the confetti effect after someone made a purchase!', imgageSrcOfUsage: ''}]
+faq: [{question: 'Can it make fireworks, too?', answer: 'No, it is a CONFETTI button...'}]
+metaDescription: "Beautifully designed button that makes it rain confetti!"
+metaTitle: "Confetti Button"
+license: MIT
+---
+
+<SubSectionOuterContainer id="Docs">
+<SubSectionTitle>Step-By-Step Guide</SubSectionTitle>
+<SubSectionInnerContainer  className="border-l-2 border-gray-300 space-y-12 max-w-5xl mt-4 px-1 pl-10 items-start overflow-x-hidden">
+<HowToStep index='1' title="Install Dependencies">
+
+Toast by Sonner - Follow instructions by [shadcn/ui - toast](https://ui.shadcn.com/docs/components/toast)
+
+<CodeBlock fileName="cli">
+
+```bash
+npm install sonner
+```
+
+</CodeBlock>
+
+Button component by [shadcn/ui - button](https://ui.shadcn.com/docs/components/button)
+
+<CodeBlock fileName="cli">
+```css
+
+```
+</CodeBlock>
+
+</HowToStep>
+<HowToStep index='2' title="Copy the Source Code">
+Confetti
+<CodeBlock fileName="@/styles/button.module.css">
+
+```css
+/* Button.module.css */
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnContainer {
+  position: relative;
+}
+
+.btnMain {
+  z-index: 5;
+}
+
+.btn3d {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  border: none;
+  background-color: gold;
+  padding: 30px 80px;
+  transform-style: preserve-3d;
+  transform: perspective(800px) rotateX(40deg);
+  z-index: 3;
+  color: black;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+}
+
+.btn3d::before {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  height: 30%;
+  background-color: gold;
+  z-index: 2;
+  transform-origin: 0% 0%;
+  transform: rotateX(-100deg);
+  background-blend-mode: soft-light;
+}
+
+.btn3d,
+.btn3d::before {
+  background-image: linear-gradient(
+    90deg,
+    transparent 40px,
+    white 40px,
+    white 100px,
+    transparent 10px,
+    transparent 120px,
+    white 120px,
+    white 140px,
+    transparent 140px,
+    transparent 300px
+  );
+  background-position: 0px 0px;
+  animation: shine 5s infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -150px 0px;
+  }
+  100% {
+    background-position: 416px 0px;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.shadow {
+  position: absolute;
+  top: calc(54% + 30px); /* Adjust top position to account for button height */
+  width: 270px;
+  height: 40px;
+  transform-style: preserve-3d;
+  transform: perspective(800px) rotateX(30deg);
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust shadow color and opacity */
+  z-index: 1; /* Ensure shadow is behind the button */
+}
+
+.btn3d:active {
+  transform: perspective(800px) rotateX(40deg) translateY(10px);
+}
+
+.down {
+  transform: translateY(2px); /* or any other transformation you desire */
+}
+
+```
+
+</CodeBlock>
+Button
+<CodeBlock fileName="@/component/NeoPopTiltedButton.tsx">
+
+```tsx
+"use client"
+import React from 'react';
+import styles from './button.module.css'; // Import styles from the CSS module
+
+
+const NeoPopTiltedButton: React.FC = () => {
+  const handleMouseDown = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    (event.target as HTMLButtonElement).classList.add(styles.down); // Use styles from the CSS module
+  };
+
+  const handleMouseUp = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    (event.target as HTMLButtonElement).classList.remove(styles.down); // Use styles from the CSS module
+  };
+
+  const handleTouchStart = (event: React.TouchEvent<HTMLButtonElement>) => {
+    (event.target as HTMLButtonElement).classList.add(styles.down); // Use styles from the CSS module
+  };
+
+  const handleTouchEnd = (event: React.TouchEvent<HTMLButtonElement>) => {
+    (event.target as HTMLButtonElement).classList.remove(styles.down); // Use styles from the CSS module
+  };
+
+  return (
+    <div className={styles.cardContainer}> {/* Use styles from the CSS module */}
+      <div className={styles.btnContainer}> {/* Use styles from the CSS module */}
+        <div className={styles.btnMain}> {/* Use styles from the CSS module */}
+          <button
+            className={styles.btn3d} 
+            onMouseDown={handleMouseDown}
+            onMouseUp={handleMouseUp}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
+            Click Me
+          </button>
+        </div>
+        <div className={styles.shadow}></div> {/* Use styles from the CSS module */}
+      </div>
+    </div>
+  );
+};
+
+export default NeoPopTiltedButton;
+```
+
+</CodeBlock>
+</HowToStep>
+<HowToStep index='3' title="Use in your App">
+<CodeBlock fileName="page.tsx">
+
+```tsx
+export default function Page() {
+	return (
+		<div className='relative dark:bg-black max-w-5xl mx-auto'>
+			<div className="mx-auto max-w-7xl py-16">
+				<div className="mx-auto text-center">
+					<h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl max-w-2xl mx-auto">
+						Buttons Rule The World
+					</h1>
+
+					<p className="mt-6 text-lg leading-8 text-muted-foreground dark:text-zinc-200 max-w-4xl mx-auto">
+						We knead the code and bake the pixels to perfection to serve you the
+						most delightful online buttons - LIKE, SUBMIT, and everything in
+						between.
+					</p>
+					<div className="mt-10 flex items-center justify-center gap-x-6">
+						<NeoPopTiltedButton />
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+}
+```
+
+</CodeBlock>
+</HowToStep>
+</SubSectionInnerContainer>
+</SubSectionOuterContainer>

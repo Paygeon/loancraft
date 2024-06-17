@@ -1,0 +1,148 @@
+---
+componentName: Loan Application
+category: fintech
+slug: loan-application
+shortDescription: "Fintech loan application"
+longDescription: "Beautifully designed custom loan application for brokers, consultants, & B2B companies. Everything works outside the box after setup!"
+hasImage: false
+imageUrl: /img/products/loan-application.png
+imageAlt: Loan Application | lendingstack
+hasComponentCode: false
+tags: ['Lenders']
+techStack: ['React', 'Tailwind', 'shadcn/ui']
+examples: [{nameOfPage: 'lendingstack', urlToPage: 'https://lendingstack.com', descriptionOfUsage: 'lendingstack is using the confetti effect after someone made a purchase!', imgageSrcOfUsage: ''}]
+faq: [{question: 'Can it make fireworks, too?', answer: 'No, it is a CONFETTI button...'}]
+metaDescription: "Custom loan application for software and consulting teams!"
+metaTitle: "Loan Application"
+license: MIT
+---
+
+<SubSectionOuterContainer id="Docs">
+<SubSectionTitle>Step-By-Step Guide</SubSectionTitle>
+<SubSectionInnerContainer  className="border-l-2 border-gray-300 space-y-12 max-w-5xl mt-4 px-1 pl-10 items-start overflow-x-hidden">
+<HowToStep index='1' title="Install Dependencies">
+
+Toast by Sonner - Follow instructions by [shadcn/ui - toast](https://ui.shadcn.com/docs/components/toast)
+
+<CodeBlock fileName="cli">
+
+```bash
+git clone https://github.com/Paygeon/loanapp.git
+```
+
+</CodeBlock>
+
+Repo by [Paygeon/ui - button](https://github.com/Paygeon/loanapp)
+
+<CodeBlock fileName="cli">
+```bash
+cd application-form
+npm install
+```
+</CodeBlock>
+
+</HowToStep>
+<HowToStep index='2' title="Setup your environment">
+Confetti
+<CodeBlock fileName=".env.local">
+
+```plaintext
+# Firebase Configuration
+FIREBASE_API_KEY=your_firebase_api_key
+FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
+FIREBASE_PROJECT_ID=your_project_id
+FIREBASE_STORAGE_BUCKET=your_project_id.appspot.com
+FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+FIREBASE_APP_ID=your_firebase_app_id
+FIREBASE_MEASUREMENT_ID=your_measurement_id
+
+# SendGrid Configuration
+SENDGRID_API_KEY=your_sendgrid_api_key
+SENDGRID_FROM_EMAIL=your_verified_sender_email
+SENDGRID_TEMPLATE_ID=your_template_id
+
+
+```
+
+</CodeBlock>
+Button
+<CodeBlock fileName="@/component/ConfettiButton.tsx">
+
+```tsx
+'use client';
+
+// Import Types
+// Import External Packages
+import { useState } from 'react';
+import { toast } from 'sonner';
+// Import Components
+import { Button } from '@/ui/Button';
+import Confetti from '@/ui/Confetti';
+// Import Functions & Actions & Hooks & State
+// Import Data
+// Import Assets & Icons
+
+export default function ConfettiButton() {
+	const [isConfettiActive, setIsConfettiActive] = useState(false);
+	return (
+		<>
+			<Button
+				onClick={() => {
+					toast.success(
+						'Oh WOW! You actually clicked the button! See ... it is well-designed! As gratitude, enjoy some confetti. 🎉'
+					);
+
+					setTimeout(() => {
+						setIsConfettiActive(true);
+					}, 3000);
+
+					setTimeout(() => {
+						setIsConfettiActive(false);
+					}, 6000);
+				}}
+				variant="default"
+				size="lg"
+				className="hover:bg-primary/80 animate-pulse shadow-2xl shadow-neutral-500"
+			>
+				Click Me
+			</Button>
+			<Confetti isActive={isConfettiActive} duration={3000} />
+		</>
+	);
+}
+```
+
+</CodeBlock>
+</HowToStep>
+<HowToStep index='3' title="Use in your App">
+<CodeBlock fileName="page.tsx">
+
+```tsx
+export default function Page() {
+	return (
+		<div className='relative dark:bg-black max-w-5xl mx-auto'>
+			<div className="mx-auto max-w-7xl py-16">
+				<div className="mx-auto text-center">
+					<h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl max-w-2xl mx-auto">
+						Buttons Rule The World
+					</h1>
+
+					<p className="mt-6 text-lg leading-8 text-muted-foreground dark:text-zinc-200 max-w-4xl mx-auto">
+						We knead the code and bake the pixels to perfection to serve you the
+						most delightful online buttons - LIKE, SUBMIT, and everything in
+						between.
+					</p>
+					<div className="mt-10 flex items-center justify-center gap-x-6">
+						<ConfettiButton />
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+}
+```
+
+</CodeBlock>
+</HowToStep>
+</SubSectionInnerContainer>
+</SubSectionOuterContainer>
