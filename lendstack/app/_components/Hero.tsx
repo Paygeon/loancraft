@@ -37,7 +37,7 @@ export default function Hero({ className }: { className?: string }) {
         id="style-WZqKO"
       >
         <span>
-          The "<span className="amazon-logo-font">amazon</span>" of
+          The &quot;<span className="amazon-logo-font">amazon</span>&quot; of
         </span>
         <span className="text-indigo-600">
           {' '}fintech

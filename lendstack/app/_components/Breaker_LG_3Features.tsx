@@ -68,7 +68,7 @@ export default function Breaker_LG_3Features({
 <li><strong>External Links</strong>: No links to external websites are allowed in the codebase.</li>
 <li><strong>Focus</strong>: Do not submit an &ldquo;all-in-one&rdquo; solution. Stick to one category per submission (e.g., insurance, lending, etc.).</li>
 <li><strong>Advertising</strong>: No ads or advertising are allowed in the codebase.</li>
-<li><strong>Design Consistency</strong>: The background of your project can only be white, black, or both. Component colors can be any color you choose but must stay consistent with the project's theme.</li>
+<li><strong>Design Consistency</strong>: The background of your project can only be white, black, or both. Component colors can be any color you choose but must stay consistent with the project&apos;s theme.</li>
 <li><strong>Security</strong>: Ensure your project adheres to security best practices, including handling sensitive data securely and following proper authentication and authorization methods.</li>
 <li><strong>Testing</strong>: Include unit tests and integration tests to verify the functionality of your components or project. Provide instructions on how to run these tests.</li>
 <li><strong>Version Control</strong>: Use a version control system (preferably Git) and provide a clear commit history. Include a version number and changelog in your repository.</li>
