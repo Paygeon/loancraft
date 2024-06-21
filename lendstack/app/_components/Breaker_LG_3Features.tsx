@@ -26,8 +26,8 @@ type Feature = {
 export default function Breaker_LG_3Features({
 	features,
 	className,
-	title = 'Buttons so beautiful, you will want to click them all day long.',
-	subTitle = 'We wrote a poem about our buttons. Seriously. ',
+	title = 'Do you want to submit to the marketplace?',
+	subTitle = 'Submission Guidelines',
 	description = 'Some Actual Description Here.',
 }: {
 	features: Feature[];
@@ -39,38 +39,45 @@ export default function Breaker_LG_3Features({
 	return (
 		<div
 			className={cn(
-				'w-full mx-auto px-8 py-16 dark:bg-black  dark:border-b dark:border-t dark:border-gray-100 dark:text-white',
+				'w-full mx-auto px-12 py-16 dark:bg-black  dark:border-b dark:border-t dark:border-gray-100 dark:text-white',
 				className
 			)}
 		>
-			<div className="max-w-5xl mx-auto">
-				<div className="mx-auto max-w-2xl text-center">
+			<div className="max-w-7xl mx-auto">
+				<div className="mx-auto max-w-2xl">
 					<h2 className="text-base font-semibold leading-7 text-primary">
 						{title}
 					</h2>
 					<p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
 						{subTitle}
 					</p>
-					<p className="text-sm italic mt-2 max-w-sm mx-auto">
-						Okay, it was ChatGPT... And we deleted like 8 verses because it went
-						nuts. But hey its buttons!
+					<p className="text-sm italic mt-2 max-w-2xl mx-auto">
+					  Welcome to finstack Marketplace! To maintain the highest quality and ensure a seamless experience for all users, please follow these submission guidelines carefully.
 					</p>
-					<p className="mt-6 text-lg leading-8 text-balance">
-						In the realm of screens where clicks reside, <br />A button&apos;s
-						born, with pride it thrives. <br />
-						Need a touch of simplicity? A button lies, <br />
-						Crafted neat, under digital skies.
-						<br />
-						<br /> Should beauty marry function, you ask? <br />
-						We have a button, up to the task. <br />
-						Sleek and sturdy, a joy to press,
-						<br /> In a world of clutter, it&apos;s a breath of fresh. <br />
-						<br />
-						So here&apos;s our button, made with care,
-						<br /> Looks good, works well, beyond compare. <br />
-						Easy, free, open, with love&apos;s embrace, <br />A tiny marvel, in
-						the digital space.
-					</p>
+
+<h2 className="text-5xl mt-4 max-w-2xl mx-auto">General Requirements</h2>
+<ol className="text-sm italic mt-4 max-w-2xl mx-auto">
+<li><strong>Originality</strong>: All submissions must be your original work. Do not submit plagiarized or copied content.</li>
+<li><strong>Quality</strong>: Submissions should be of professional quality, free from errors, and follow best practices in software development.</li>
+<li><strong>Compliance</strong>: Ensure that your submission complies with all relevant laws, regulations, and industry standards.</li>
+<li><strong>Documentation</strong>: Provide thorough and clear documentation. This should include installation instructions, usage guidelines, and any dependencies required.</li>
+<li><strong>Support</strong>: Indicate the level of support you will provide for your submission. This can range from no support to extensive, paid support.</li>
+<li><strong>Dependencies</strong>: If your project requires dependencies (npm packages, Docker images), ensure these dependencies are publicly accessible.</li>
+<li><strong>API Connections</strong>: If your project requires API connections with a third-party vendor (e.g., Stripe, Plaid), include a <code>.env</code> file in your build step with sample environment variables.</li>
+<li><strong>Licensing</strong>: Make sure the master repository for your project is open to the public with the MIT license.</li>
+<li><strong>External Links</strong>: No links to external websites are allowed in the codebase.</li>
+<li><strong>Focus</strong>: Do not submit an &ldquo;all-in-one&rdquo; solution. Stick to one category per submission (e.g., insurance, lending, etc.).</li>
+<li><strong>Advertising</strong>: No ads or advertising are allowed in the codebase.</li>
+<li><strong>Design Consistency</strong>: The background of your project can only be white, black, or both. Component colors can be any color you choose but must stay consistent with the project's theme.</li>
+<li><strong>Security</strong>: Ensure your project adheres to security best practices, including handling sensitive data securely and following proper authentication and authorization methods.</li>
+<li><strong>Testing</strong>: Include unit tests and integration tests to verify the functionality of your components or project. Provide instructions on how to run these tests.</li>
+<li><strong>Version Control</strong>: Use a version control system (preferably Git) and provide a clear commit history. Include a version number and changelog in your repository.</li>
+<li><strong>User Interface</strong>: Ensure the user interface is intuitive and user-friendly. Follow modern UI/UX design principles.</li>
+<li><strong>Performance</strong>: Optimize your code for performance. Avoid unnecessary computations and ensure that your project runs efficiently.</li>
+<li><strong>Accessibility</strong>: Ensure your project is accessible to all users, including those with disabilities. Follow accessibility standards and guidelines.</li>
+<li><strong>Review Process</strong>: Be prepared for a review process where your submission may be evaluated and feedback provided. Make necessary adjustments based on the feedback.</li>
+<li><strong>Updates and Maintenance</strong>: Indicate your plan for future updates and maintenance. Regular updates improve the longevity and reliability of your submission.</li>
+</ol>
 				</div>
 				<div className="mx-auto mt-12">
 					<div className="grid grid-cols-1 gap-x-16 gap-y-16 lg:grid-cols-2">

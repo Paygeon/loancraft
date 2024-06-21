@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Officina+Sans&display=swap');
+
+.amazon-logo-font {
+  font-family: 'Officina Sans', sans-serif; /* Replace with the closest matching font */
+  font-weight: bold; /* Adjust as needed */
+  color: #ff9900; /* Amazon's logo color */
+  text-transform: lowercase; /* Ensure the text is in lowercase */
+}
+
+/* Additional styles to match Amazon's logo text appearance */
+.amazon-logo-font {
+  font-size: inherit; /* Adjust font size as needed */
+  letter-spacing: -0.02em; /* Adjust letter spacing as needed */
+}
