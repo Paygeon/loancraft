@@ -3,43 +3,55 @@ const path = require('path');
 
 const directoryPath = path.join(__dirname, './app/(Public)/(Legal)/privacy-policy');
 
-function replaceInFile(filePath) {
+// Function to process each file
+function processFile(filePath) {
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
-      return console.log(err);
+      console.error(`Error reading file ${filePath}: ${err}`);
+      return;
     }
 
-    const result = data
-      .replace(/=\\"([^\\"]+?)\\"/g, '=&quot;$1&quot;')
-      .replace(/=\\"([^\\"]+?)\\"/g, '=&quot;$1&quot;')
-      .replace(/=\''([^\\']+?)\'/g, '=&apos;$1&apos;')
-      .replace(/=\''([^\\']+?)\'/g, '=&apos;$1&apos;');
+    // Regular expressions to replace unescaped quotes
+    const fixedContent = data
+      .replace(/([^\\])"/g, '$1&quot;') // Fix double quotes not preceded by a backslash
+      .replace(/([^\\])'/g, '$1&apos;'); // Fix single quotes not preceded by a backslash
 
-    fs.writeFile(filePath, result, 'utf8', (err) => {
-      if (err) return console.log(err);
+    // Save the fixed content back to the file
+    fs.writeFile(filePath, fixedContent, 'utf8', (err) => {
+      if (err) {
+        console.error(`Error writing file ${filePath}: ${err}`);
+        return;
+      }
+      console.log(`Processed file: ${filePath}`);
     });
   });
 }
 
-function traverseDirectory(dir) {
-  fs.readdir(dir, (err, files) => {
+// Function to traverse the directory and process each file
+function traverseDirectory(dirPath) {
+  fs.readdir(dirPath, (err, files) => {
     if (err) {
-      return console.log('Unable to scan directory: ' + err);
+      console.error(`Error reading directory ${dirPath}: ${err}`);
+      return;
     }
+
     files.forEach((file) => {
-      const filePath = path.join(dir, file);
+      const filePath = path.join(dirPath, file);
       fs.stat(filePath, (err, stats) => {
         if (err) {
-          return console.log(err);
+          console.error(`Error stating file ${filePath}: ${err}`);
+          return;
         }
+
         if (stats.isDirectory()) {
-          traverseDirectory(filePath);
-        } else if (filePath.endsWith('.tsx')) {
-          replaceInFile(filePath);
+          traverseDirectory(filePath); // Recursively process subdirectories
+        } else if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) {
+          processFile(filePath); // Process JSX/TSX files
         }
       });
     });
   });
 }
 
+// Start processing from the specified directory
 traverseDirectory(directoryPath);
