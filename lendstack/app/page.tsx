@@ -13,6 +13,7 @@ import FAQ from '@/components/FAQ';
 import { CATEGORIES_DESC, GENERAL_FAQS } from '@/constants';
 import { BentoGridThirdDemo } from './_components/BentoGridThirdDemo';
 import CombinedTitleSubtitle from './_components/_ui/Title';
+import TextScroll from './_components/text_scroll/TextScroll';
 
 // Import Assets & Icons
 
@@ -37,6 +38,7 @@ export default function Home() {
 			</Suspense>
 			<BreakerWithIcons />
 			<Breaker_LG_3Features features={CATEGORIES_DESC} />
+			<TextScroll />
 			<FAQ faqs={GENERAL_FAQS} className="text-center max-w-3xl mt-8" />
 			<NewsletterBox_BeeHiiv />
 		</div>

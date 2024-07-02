@@ -8,7 +8,7 @@
       "longDescription": "Beautifully designed button that makes it rain confetti!",
       "hasImage": true,
       "imageUrl": "/img/products/confetti-button.png",
-      "imageAlt": "Confetti Button | lendingstack",
+      "imageAlt": "Confetti Button | financechest",
       "hasComponentCode": true,
       "tags": [
         "Click-Effect"
@@ -20,9 +20,9 @@
       ],
       "examples": [
         {
-          "nameOfPage": "lendingstack",
-          "urlToPage": "https://lendingstack.com",
-          "descriptionOfUsage": "lendingstack is using the confetti effect after someone made a purchase!",
+          "nameOfPage": "financechest",
+          "urlToPage": "https://financechest.io",
+          "descriptionOfUsage": "financechest is using the confetti effect after someone made a purchase!",
           "imgageSrcOfUsage": ""
         }
       ],
@@ -38,14 +38,14 @@
       "productLine": "components"
     },
     {
-      "componentName": "Neopop Credit Card",
+      "componentName": "Card Component",
       "category": "components",
       "slug": "neopop-credit-card",
-      "shortDescription": "Credit card inspired by Cred!",
-      "longDescription": "Beautifully designed credit card from the popular indian fintech company CRED.CLUB!",
+      "shortDescription": "Credit card component developed by Finance Chest.",
+      "longDescription": "This component was developed to show both the front and back side of a debit or credit card as well as other visually appealing animations unique to only Finance Chest but stil keeping the code modular and scalable.",
       "hasImage": true,
-      "imageUrl": "/img/products/neopop-credit-card.png",
-      "imageAlt": "Neopop Credit Card | lendingstack",
+      "imageUrl": "/img/products/cardstack.png",
+      "imageAlt": "Card Component | Finance Chest",
       "hasComponentCode": true,
       "tags": [
         "Credit-Card"
@@ -53,24 +53,25 @@
       "techStack": [
         "React 18",
         "CSS3",
-        "TypeScript"
+        "TypeScript",
+        "NextJs"
       ],
       "examples": [
         {
-          "nameOfPage": "lendingstack",
-          "urlToPage": "https://lendingstack.com",
-          "descriptionOfUsage": "lendingstack is using the confetti effect after someone made a purchase!",
+          "nameOfPage": "financechest",
+          "urlToPage": "https://financechest.io",
+          "descriptionOfUsage": "financechest is using the confetti effect after someone made a purchase!",
           "imgageSrcOfUsage": ""
         }
       ],
       "faq": [
         {
-          "question": "Can it make fireworks, too?",
-          "answer": "No, it is a CONFETTI button..."
+          "question": "What integrations come built-in with this component?",
+          "answer": "Corpay"
         }
       ],
       "metaDescription": "Beautifully designed credit card from CRED.CLUB!",
-      "metaTitle": "Neopop Credit Card",
+      "metaTitle": "Fintech Card Component",
       "license": "MIT",
       "productLine": "components"
     },
@@ -82,7 +83,7 @@
       "longDescription": "The Golden Shimmer Tilted Button is a testament to opulence and sophistication, designed to elevate any digital interface with its radiant allure. This component embodies the essence of luxury, crafted with meticulous attention to detail and a passion for exquisite design.",
       "hasImage": true,
       "imageUrl": "/img/products/shimmer-button.gif",
-      "imageAlt": "Shimmer Button | lendingstack",
+      "imageAlt": "Shimmer Button | financechest",
       "hasComponentCode": true,
       "tags": [
         "Click-Effect"
@@ -94,9 +95,9 @@
       ],
       "examples": [
         {
-          "nameOfPage": "lendingstack",
-          "urlToPage": "https://lendingstack.com",
-          "descriptionOfUsage": "lendingstack is using the confetti effect after someone made a purchase!",
+          "nameOfPage": "financechest",
+          "urlToPage": "https://financechest.io",
+          "descriptionOfUsage": "financechest is using the confetti effect after someone made a purchase!",
           "imgageSrcOfUsage": ""
         }
       ],
@@ -108,6 +109,44 @@
       ],
       "metaDescription": "Beautifully designed button that makes it rain confetti!",
       "metaTitle": "Confetti Button",
+      "license": "MIT",
+      "productLine": "components"
+    },
+    {
+      "componentName": "Transaction List Component",
+      "category": "components",
+      "slug": "transaction-list",
+      "shortDescription": "A simple transaction list for card-based fintech apps.",
+      "longDescription": "Transactions is a digital ledger of exchanges between a buyer and a merchant, this transaction list displays the merchant, transaction id, purchase date, and amount.",
+      "hasImage": true,
+      "imageUrl": "/img/products/Transactions List.svg",
+      "imageAlt": "Transactions List | Finance Chest",
+      "hasComponentCode": true,
+      "tags": [
+        "Credit-Card"
+      ],
+      "techStack": [
+        "React 18",
+        "CSS3",
+        "TypeScript",
+        "NextJs"
+      ],
+      "examples": [
+        {
+          "nameOfPage": "financechest",
+          "urlToPage": "https://financechest.io",
+          "descriptionOfUsage": "financechest is using the confetti effect after someone made a purchase!",
+          "imgageSrcOfUsage": ""
+        }
+      ],
+      "faq": [
+        {
+          "question": "What integrations come built-in with this component?",
+          "answer": "Corpay"
+        }
+      ],
+      "metaDescription": "Simple transactions list component developed by Finance Chest",
+      "metaTitle": "Fintech Transactions List Component",
       "license": "MIT",
       "productLine": "components"
     }
@@ -121,7 +160,7 @@
       "longDescription": "Beautifully designed custom loan application for brokers, consultants, & B2B companies. Everything works outside the box after setup!",
       "hasImage": false,
       "imageUrl": "/img/products/loan-application.png",
-      "imageAlt": "Loan Application | lendingstack",
+      "imageAlt": "Loan Application | financechest",
       "hasComponentCode": false,
       "tags": [
         "Lenders"
@@ -133,9 +172,9 @@
       ],
       "examples": [
         {
-          "nameOfPage": "lendingstack",
-          "urlToPage": "https://lendingstack.com",
-          "descriptionOfUsage": "lendingstack is using the confetti effect after someone made a purchase!",
+          "nameOfPage": "financechest",
+          "urlToPage": "https://financechest.io",
+          "descriptionOfUsage": "financechest is using the confetti effect after someone made a purchase!",
           "imgageSrcOfUsage": ""
         }
       ],

@@ -26,7 +26,7 @@ import { FAQ_PAIR } from '@/types';
  */
 export default function FAQ({
 	title = 'Frequently Asked Questions',
-	description = 'We have compiled a list of frequently asked questions. If you have any other questions, please do not hesitate to contact us via email or using the chat function. We are here to help!',
+	description = 'We have compiled a list of frequently asked questions. If you have any other questions, please do not hesitate to contact us via email or using the chat function. We are here to help.',
 	faqs,
 	className,
 }: {

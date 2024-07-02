@@ -29,9 +29,9 @@ export default function NewsletterBox_BeeHiiv({
 	className,
 	title = 'Excited about buttons as we are?',
 	description = 'Get the latest buttons and button news straight to your inbox.',
-	disclaimer = 'DISCLAIMER: This is the Newsletter of lendingstack! Powered by Beehiiv.com. Unsubscribe at anytime by clicking the unsubscribe button in any email sent to you.',
+	disclaimer = 'DISCLAIMER: This is the Newsletter of financechest! Powered by Beehiiv.com. Unsubscribe at anytime by clicking the unsubscribe button in any email sent to you.',
 	textForPrivacyPolicy = 'Read our privacy policy',
-	linkToPrivacyPolicy = 'https://lendingstack.com/privacy-policy',
+	linkToPrivacyPolicy = 'https://financechest.io/privacy-policy',
 }: {
 	size?: 'sm' | 'lg';
 	className?: string;

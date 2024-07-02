@@ -52,32 +52,11 @@ export default function Breaker_LG_3Features({
 						{subTitle}
 					</p>
 					<p className="text-sm italic mt-2 max-w-2xl mx-auto">
-					  Welcome to finstack Marketplace! To maintain the highest quality and ensure a seamless experience for all users, please follow these submission guidelines carefully.
+					  Welcome to the Finance Chest Marketplace! To maintain the highest quality and ensure a seamless experience for all users, please follow these submission guidelines carefully.
 					</p>
 
-<h2 className="text-5xl mt-4 max-w-2xl mx-auto">General Requirements</h2>
-<ol className="text-sm italic mt-4 max-w-2xl mx-auto">
-<li><strong>Originality</strong>: All submissions must be your original work. Do not submit plagiarized or copied content.</li>
-<li><strong>Quality</strong>: Submissions should be of professional quality, free from errors, and follow best practices in software development.</li>
-<li><strong>Compliance</strong>: Ensure that your submission complies with all relevant laws, regulations, and industry standards.</li>
-<li><strong>Documentation</strong>: Provide thorough and clear documentation. This should include installation instructions, usage guidelines, and any dependencies required.</li>
-<li><strong>Support</strong>: Indicate the level of support you will provide for your submission. This can range from no support to extensive, paid support.</li>
-<li><strong>Dependencies</strong>: If your project requires dependencies (npm packages, Docker images), ensure these dependencies are publicly accessible.</li>
-<li><strong>API Connections</strong>: If your project requires API connections with a third-party vendor (e.g., Stripe, Plaid), include a <code>.env</code> file in your build step with sample environment variables.</li>
-<li><strong>Licensing</strong>: Make sure the master repository for your project is open to the public with the MIT license.</li>
-<li><strong>External Links</strong>: No links to external websites are allowed in the codebase.</li>
-<li><strong>Focus</strong>: Do not submit an &ldquo;all-in-one&rdquo; solution. Stick to one category per submission (e.g., insurance, lending, etc.).</li>
-<li><strong>Advertising</strong>: No ads or advertising are allowed in the codebase.</li>
-<li><strong>Design Consistency</strong>: The background of your project can only be white, black, or both. Component colors can be any color you choose but must stay consistent with the project&apos;s theme.</li>
-<li><strong>Security</strong>: Ensure your project adheres to security best practices, including handling sensitive data securely and following proper authentication and authorization methods.</li>
-<li><strong>Testing</strong>: Include unit tests and integration tests to verify the functionality of your components or project. Provide instructions on how to run these tests.</li>
-<li><strong>Version Control</strong>: Use a version control system (preferably Git) and provide a clear commit history. Include a version number and changelog in your repository.</li>
-<li><strong>User Interface</strong>: Ensure the user interface is intuitive and user-friendly. Follow modern UI/UX design principles.</li>
-<li><strong>Performance</strong>: Optimize your code for performance. Avoid unnecessary computations and ensure that your project runs efficiently.</li>
-<li><strong>Accessibility</strong>: Ensure your project is accessible to all users, including those with disabilities. Follow accessibility standards and guidelines.</li>
-<li><strong>Review Process</strong>: Be prepared for a review process where your submission may be evaluated and feedback provided. Make necessary adjustments based on the feedback.</li>
-<li><strong>Updates and Maintenance</strong>: Indicate your plan for future updates and maintenance. Regular updates improve the longevity and reliability of your submission.</li>
-</ol>
+<h2 className="text-5xl mt-4 max-w-2xl mx-auto"></h2>
+
 				</div>
 				<div className="mx-auto mt-12">
 					<div className="grid grid-cols-1 gap-x-16 gap-y-16 lg:grid-cols-2">

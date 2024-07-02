@@ -1,7 +1,7 @@
 # Implementation Guide
 
-Welcome to the implementation guide of [lendingstack's](https://lendingstack.com) [Ui Component Library](https://lendingstack.com/templates/ui-component-library).
-If you struggle at any point, you have several options, including contacting me through email [support@lendingstack.com], through [X/Twitter](https://x.com/tkahlen), refer to the more [detailed docs](https://lendingstack.com/docs), or ask ChatGPT. :D
+Welcome to the implementation guide of [financechest's](https://financechest.io) [Ui Component Library](https://financechest.io/templates/ui-component-library).
+If you struggle at any point, you have several options, including contacting me through email [support@financechest.io], through [X/Twitter](https://x.com/tkahlen), refer to the more [detailed docs](https://financechest.io/docs), or ask ChatGPT. :D
 
 ## Step 1: Business Details
 

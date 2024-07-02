@@ -37,19 +37,19 @@ export const CREATOR_LINK = {
 export const YEAR_OF_CREATION = '2024';
 
 // What is the name of your company?
-// Example: 'lendingstack'
+// Example: 'financechest'
 
 export const COMPANY_NAME = 'Loancraft';
 
 // What is the full domain of your company?
-// Example: 'https://lendingstack.com'
+// Example: 'https://financechest.io'
 
-export const COMPANY_WEBSITE_URL = 'https://lendingstack.com';
+export const COMPANY_WEBSITE_URL = 'https://financechest.io';
 
 // What is your support email?
-// Example: 'support@lendingstack.com'
+// Example: 'support@financechest.io'
 
-export const COMPANY_SUPPORT_EMAIL = 'support@lendingstack.com';
+export const COMPANY_SUPPORT_EMAIL = 'support@financechest.io';
 
 // What is a short description of your company?
 // (Title = max 60 characters; Description = max 160 characters; Tags = max 5)
@@ -71,8 +71,8 @@ export const COMPANY_TAGS = ['loan', 'lending', 'widget'];
 export const SOCIAL_FOLLOW_LINKS: SocialFollowLinkObject[] = [
 	{
 		channelName: 'X',
-		channelHref: 'https://twitter.com/lendingstack',
-		username: '@lendingstack',
+		channelHref: 'https://twitter.com/financechest',
+		username: '@financechest',
 		Icon: Icons.X,
 	},
 ];
@@ -154,8 +154,8 @@ export const FOOTER_SLOGAN: string =
 
 export const FOOTER_EXTERNAL_LINK_LIST: LinkListItem[] = [
 	{
-		label: 'Boilerplates @ lendingstack.com',
-		href: 'https://lendingstack.com',
+		label: 'Boilerplates @ financechest.io',
+		href: 'https://financechest.io',
 	},
 	{
 		label: 'Domain Hacks @ Domainhacks.info',
@@ -171,19 +171,19 @@ export const FOOTER_EXTERNAL_LINK_LIST: LinkListItem[] = [
 
 export const GENERAL_FAQS: FAQ_PAIR[] = [
 	{
-		question: 'What is a button?',
+		question: 'What makes Finance Chest components better than others?',
 		answer:
-			'A button is a user interface element that users can click or tap to perform an action. Buttons are typically found in forms, dialog boxes, and other areas of a website or app where users need to interact with the interface.',
+			'Components made by Finance Chest come pre-built with multiple API integrations making developmnent and launch much more quicker. Simply paste the compatible 3rd party API key into your secret variables to add functionality to your component.',
 	},
 	{
-		question: 'Why should I care about buttons?',
+		question: 'Can I further customize the code?',
 		answer:
-			'Buttons are an essential part of any user interface. They help users navigate through a website or app, submit forms, and perform other actions. Well-designed buttons can improve the user experience and make it easier for users to interact with your product.',
+			'Yes, all components were developed with scalability in mind.',
 	},
 	{
-		question: 'Are all Buttons Free?',
+		question: 'Are all components Free?',
 		answer:
-			'Yes, all buttons are free to use. You can download them and use them in your projects without any restrictions.',
+			'Yes, all components use the MIT license and are free to use. You can download them and use them in your projects without any restrictions.',
 	},
 ];
 

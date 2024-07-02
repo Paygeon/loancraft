@@ -1,0 +1,124 @@
+
+:root {
+    --bg: hsl(0 0% 2%);
+    --color: hsl(0 0% 100% / 0.1);
+    --underline-width: 1lh;
+    --underline-block-width: 200vmax;
+    --underline-color: hsl(0 0% 50% / 0.15);
+    --underline-color-hover: hsl(180 100% 50% / 1);
+    --underline-transition: 5s;
+    --finish-fill: hsl(0 0% 100%);
+    --accent: hsl(0 0% 100%);
+    --fill: hsl(0 0% 50%);
+  }
+  
+  body {
+    background-color: var(--bg);
+    color: var(--color);
+    font-weight: bold;
+    accent-color: red;
+  }
+
+  body {
+    font-family: gilroy-regular;
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    margin: 30px;
+  }
+  
+  :root:has(#driver:checked) main {
+      outline: 1rem dashed hsl(0 80% 50% / 0.5);
+      background: hsl(0 80% 50% / 0.1);
+  }
+  
+
+  
+  h1, h2 {
+    font-weight: 320;
+    background: linear-gradient(var(--finish-fill), var(--fill));
+    background-clip: text;
+    color: transparent;
+  /*  text-transform: uppercase;*/
+  }
+  
+  .loopy {
+    resize: both;
+    max-width: 50vw;
+  }
+  
+  .loopy > span {
+      outline-color: hsl(10 80% 50%);
+      outline-offset: 1ch;
+      font-size: clamp(3rem, 1vw + 1rem, 5rem);
+    color: var(--color);
+    text-decoration: none;
+    background-image:
+          /* First one is the highlight */
+          linear-gradient(90deg, transparent calc(100% - 8ch), var(--accent) calc(100%  - 8ch)),
+        linear-gradient(90deg, var(--fill), var(--fill)),
+      linear-gradient(90deg, var(--underline-color), var(--underline-color));
+    background-size:
+        var(--underline-block-width) var(--underline-width),
+        var(--underline-block-width) var(--underline-width),
+      100% var(--underline-width);
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    background-position-y: 100%;
+    background-clip: text;
+    color: var(--finish-fill);
+  }
+  
+  /*p > span {
+    background-clip: unset;
+    color: transparent;
+    background-position-x: -200vmax, -200vmax, 0;
+    animation: fill-up 4s infinite linear;
+  }
+  
+  @keyframes fill-up {
+    to { background-position-x: 0, 0, 0; }
+  }*/
+  
+  .texty {
+    height: 350vh;
+  }
+  
+  .lighty {
+    position: sticky;
+    top: 100px;
+      width: 100vw;
+    display: grid;
+    place-items: center;
+  }
+  
+  
+  @supports (animation-timeline: scroll()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .texty {
+        view-timeline-name: --section;
+      }
+      
+      .loopy > span {
+        background-position-x:
+          calc(var(--underline-block-width) * -1),
+          calc(var(--underline-block-width) * -1),
+          0;
+        color: transparent;
+        animation-name: fill-up, color-in;
+        animation-fill-mode: both;
+        animation-timing-function: linear;
+          animation-timeline: --section;
+          animation-range: entry 100% cover 50%, cover 50% exit 0%;
+      }
+  
+      @keyframes fill-up {
+          to { background-position-x: 0, 0, 0; }
+      }
+  
+      @keyframes color-in {
+          to { color: var(--finish-fill); }
+      }
+    }
+  }
+  
+  

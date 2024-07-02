@@ -1,6 +1,6 @@
 'use client';
 
-// Credit to: lendingstack.com
+// Credit to: financechest.io
 // Import Types
 // Import External Packages
 import { useEffect, useRef } from 'react';

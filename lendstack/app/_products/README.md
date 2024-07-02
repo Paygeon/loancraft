@@ -3,7 +3,7 @@
 Adding products to your Ui Component Library is as easy as adding a single MDX file to a folder.
 As an example, we added the product 'Confetti Button' which you can always take as a reference.
 
-Other than that: If you have any questions send an email to [support@lendingstack.com].
+Other than that: If you have any questions send an email to [support@financechest.io].
 
 ## File Structure
 
@@ -273,7 +273,7 @@ Adding new components is easy:
 
 First of all, this file is optional!
 
-You'll only want it, if you have something to render in the 'Preview Box' on your Product's Product Page. For reference, go to `https://lendingstack.com/components/button-back-to-top` and check the 'Preview' section in which the 'Back to top'-Button is actually being rendered. The source code of this button would be placed in the `button-back-to-top.tsx` file.
+You'll only want it, if you have something to render in the 'Preview Box' on your Product's Product Page. For reference, go to `https://financechest.io/components/button-back-to-top` and check the 'Preview' section in which the 'Back to top'-Button is actually being rendered. The source code of this button would be placed in the `button-back-to-top.tsx` file.
 
 So, the .tsx file itself is straightforward. It is a working (meaning functional) version of your Product which can be rendered visually.
 If we stick to the 'Confetti Button' example, this file should contain the source code of the Confetti Button. That is it.

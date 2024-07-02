@@ -1,38 +1,38 @@
 License Agreement
-lendingstack uses two different licenses for our products - The Standard License and the MIT License. The type of license you need depends on the type of product (=also referred to as 'work', 'component', 'module', 'template', 'boilerplate', 'function', or their respective plural versions) and is being displayed on a product's page. Generally speaking, all paid products require a Standard License, while all free products operate under the MIT License. If in doubt about the terms or about your use case, please contact us at [support@lendingstack.com].
+financechest uses two different licenses for our products - The Standard License and the MIT License. The type of license you need depends on the type of product (=also referred to as 'work', 'component', 'module', 'template', 'boilerplate', 'function', or their respective plural versions) and is being displayed on a product's page. Generally speaking, all paid products require a Standard License, while all free products operate under the MIT License. If in doubt about the terms or about your use case, please contact us at [support@financechest.io].
 
 Last Updated: March 6, 2024
 
 The Standard License
-This Standard License Agreement ("Agreement") is a legal agreement between you (either an individual or a single entity, referred to herein as "Licensee") and lendingstack, a service of The Keyword Company, by Till Kahlen ("lendingstack"), regarding the use of a specific software template, documentation, and any associated materials (hereinafter referred to as the "Product") provided by lendingstack upon purchase. The Product refers to the specific template or item for which the Licensee has paid and received access to download or use. By purchasing, downloading, or using the Product, the Licensee agrees to be bound by the terms of this Agreement. This Agreement applies solely to the Product purchased and does not grant any rights or licenses to other templates or products offered by lendingstack, whether purchased separately or not.
+This Standard License Agreement ("Agreement") is a legal agreement between you (either an individual or a single entity, referred to herein as "Licensee") and financechest, a service of The Keyword Company, by Till Kahlen ("financechest"), regarding the use of a specific software template, documentation, and any associated materials (hereinafter referred to as the "Product") provided by financechest upon purchase. The Product refers to the specific template or item for which the Licensee has paid and received access to download or use. By purchasing, downloading, or using the Product, the Licensee agrees to be bound by the terms of this Agreement. This Agreement applies solely to the Product purchased and does not grant any rights or licenses to other templates or products offered by financechest, whether purchased separately or not.
 
 1. Grant of License
-lendingstack hereby grants the Licensee a non-exclusive, non-transferable, worldwide license to use the Product (the specific template or item purchased) for the purpose of developing, testing, and deploying web applications or websites, subject to the terms and conditions set forth herein. Each Product is licensed under a separate Agreement, and the purchase of multiple Products requires adherence to the terms of each respective Agreement.
+financechest hereby grants the Licensee a non-exclusive, non-transferable, worldwide license to use the Product (the specific template or item purchased) for the purpose of developing, testing, and deploying web applications or websites, subject to the terms and conditions set forth herein. Each Product is licensed under a separate Agreement, and the purchase of multiple Products requires adherence to the terms of each respective Agreement.
 
 2. Permitted Uses
 The Licensee is permitted to:
 Use the Product to create - an unlimited amount of - web applications or websites for personal or commercial use.
 Modify or alter the Product for the purpose of integrating it into the Licensee's web applications or websites.
-Use the Product to create a competing product or service that is directly or indirectly in competition with lendingstack. [Please note: You may build a competing offer (e.g. Your own component library website with paid components), but you may not sell or distribute the Product or any part thereof as a standalone product or service within your competing offer (as outlined above), as per the restrictions in Section 3.]
+Use the Product to create a competing product or service that is directly or indirectly in competition with financechest. [Please note: You may build a competing offer (e.g. Your own component library website with paid components), but you may not sell or distribute the Product or any part thereof as a standalone product or service within your competing offer (as outlined above), as per the restrictions in Section 3.]
 
 3. Restrictions
 Notwithstanding the above, the Licensee shall not:
 Resell, redistribute, sublicense, or transfer the Product, or any derivative thereof, to any third party, whether for profit or without charge.
-Provide access to the Product, or any part thereof, including but not limited to, templates, components, modules, functions, and documentation, to any third party. This includes sharing access to the Licensee's account on lendingstack, any private GitHub repositories containing the Product, or forwarding, sharing, or distributing the Product or parts thereof in any form, including zip-files.
+Provide access to the Product, or any part thereof, including but not limited to, templates, components, modules, functions, and documentation, to any third party. This includes sharing access to the Licensee's account on financechest, any private GitHub repositories containing the Product, or forwarding, sharing, or distributing the Product or parts thereof in any form, including zip-files.
 Publish, make available, or use the Product or any part thereof as part of a service bureau, application service provider, or any other third-party service.
 
 4. Intellectual Property Rights
-The Product, including but not limited to its code, documentation, appearance, structure, and organization, is the proprietary product of lendingstack and its licensors, protected by copyright and other intellectual property laws. The Licensee is granted a license to use the Product as provided under this Agreement, and does not acquire any rights, express or implied, in the Product, other than those specified in this Agreement.
+The Product, including but not limited to its code, documentation, appearance, structure, and organization, is the proprietary product of financechest and its licensors, protected by copyright and other intellectual property laws. The Licensee is granted a license to use the Product as provided under this Agreement, and does not acquire any rights, express or implied, in the Product, other than those specified in this Agreement.
 
 5. Termination
-This Agreement is effective until terminated. The Agreement will terminate automatically without notice from lendingstack if the Licensee fails to comply with any provision contained herein. Upon termination, the Licensee must destroy all copies of the Product and all of its component parts.
+This Agreement is effective until terminated. The Agreement will terminate automatically without notice from financechest if the Licensee fails to comply with any provision contained herein. Upon termination, the Licensee must destroy all copies of the Product and all of its component parts.
 
 6. Consequences of Non-Compliance
-In the event of a breach of this Agreement by the Licensee, including, but not limited to, the restrictions set forth in Section 3, lendingstack reserves the right to take any or all of the following actions:
-Immediate Termination: This Agreement and the license granted herein will terminate immediately without notice from lendingstack. Upon termination, the Licensee must cease all use of the Product and destroy all copies, full or partial, of the Product.
-Legal Action: lendingstack reserves the right to seek injunctive relief, damages, and any other remedies available under law or equity against the Licensee for violating the terms of this Agreement.
-Penalties and Damages: The Licensee may be held liable for any damages suffered by lendingstack as a result of the breach, including but not limited to financial damages and loss of reputation.
-The Licensee acknowledges that non-compliance with the terms of this Agreement may cause irreparable harm to lendingstack for which monetary damages may be insufficient, and thus lendingstack is entitled to seek injunctive relief in addition to any other remedies available.
+In the event of a breach of this Agreement by the Licensee, including, but not limited to, the restrictions set forth in Section 3, financechest reserves the right to take any or all of the following actions:
+Immediate Termination: This Agreement and the license granted herein will terminate immediately without notice from financechest. Upon termination, the Licensee must cease all use of the Product and destroy all copies, full or partial, of the Product.
+Legal Action: financechest reserves the right to seek injunctive relief, damages, and any other remedies available under law or equity against the Licensee for violating the terms of this Agreement.
+Penalties and Damages: The Licensee may be held liable for any damages suffered by financechest as a result of the breach, including but not limited to financial damages and loss of reputation.
+The Licensee acknowledges that non-compliance with the terms of this Agreement may cause irreparable harm to financechest for which monetary damages may be insufficient, and thus financechest is entitled to seek injunctive relief in addition to any other remedies available.
 
 7. Governing Law
 This Agreement shall be governed by and construed in accordance with the laws of Germany, without regard to its conflict of law provisions.
