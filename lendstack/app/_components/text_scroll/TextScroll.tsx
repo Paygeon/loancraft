@@ -8,12 +8,10 @@ const TextScroll: React.FC = () => {
     <main className="texty">
       <section className="lighty">
         <p className="loopy">
-          <span>- Easy to understand<br/>
-          - Include documentation<br/>
-          - Utility-only components<br/>
+          <span>- Single, utility components<br/>
+          - Simple setup guidelines<br/>
           - Unique styles<br/>
-          - No advertisments<br/>
-          - No full applications<br/>
+          - No self promotion<br/>
           - Built for API integration<br/>
           - Mobile Responsive</span>
         </p>

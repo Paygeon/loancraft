@@ -24,21 +24,19 @@ import TextScroll from './_components/text_scroll/TextScroll';
  */
 export default function Home() {
 	const subtitles = [
-	  "Pre-built projects and features to spearhead your next launch"
+	  ""
 	];
 	return (
 		<div className="flex flex-col mx-auto">
 			<Hero />
 			<br/>
-			<CombinedTitleSubtitle title="Projects Available" subtitles={subtitles} />
-			<BentoGridThirdDemo />
+			<CombinedTitleSubtitle title="" subtitles={subtitles} />
 			<br/>
 			<Suspense>
 				<CategoryOverview categoryName="components" />
 			</Suspense>
 			<BreakerWithIcons />
 			<Breaker_LG_3Features features={CATEGORIES_DESC} />
-			<TextScroll />
 			<FAQ faqs={GENERAL_FAQS} className="text-center max-w-3xl mt-8" />
 			<NewsletterBox_BeeHiiv />
 		</div>

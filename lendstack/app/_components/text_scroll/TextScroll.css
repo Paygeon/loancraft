@@ -12,33 +12,9 @@
     --fill: hsl(0 0% 50%);
   }
   
-  body {
-    background-color: var(--bg);
-    color: var(--color);
-    font-weight: bold;
-    accent-color: red;
-  }
-
-  body {
-    font-family: gilroy-regular;
-    color: rgb(0, 0, 0);
-    background-color: rgb(0, 0, 0);
-    margin: 30px;
-  }
-  
   :root:has(#driver:checked) main {
       outline: 1rem dashed hsl(0 80% 50% / 0.5);
       background: hsl(0 80% 50% / 0.1);
-  }
-  
-
-  
-  h1, h2 {
-    font-weight: 320;
-    background: linear-gradient(var(--finish-fill), var(--fill));
-    background-clip: text;
-    color: transparent;
-  /*  text-transform: uppercase;*/
   }
   
   .loopy {

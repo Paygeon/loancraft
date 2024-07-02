@@ -142,13 +142,13 @@ export const FOOTER_NAVIGATION_LINKS: { [key: string]: LinkListItem[] } = {
 // What are disclaimers you want to show in the Footer?
 
 export const FOOTER_DISCLAIMERS: string[] = [
-	'Disclaimer: We know that the button logo is "the other kind of button". We like to spice things up! ;)',
+	'Disclaimer: This marketplace provides components and API connections to various fintech services. Users are responsible for linking their own API keys from the respective service providers. We do not offer the services themselves, only the connections and components. The components on this marketplace are provided "as-is" without warranties of any kind. Use them at your own risk. We are not liable for any damages or losses resulting from the use of these components.',
 ];
 
 // What is the slogan you want to show in the Footer?
 
 export const FOOTER_SLOGAN: string =
-	'Jumpstart your idea-to-button journey with best in class buttons.';
+	'Jumpstart your idea-to-fintech journey with best in class financial components.';
 
 // What are the external links you want to show in the Footer?
 

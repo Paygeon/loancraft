@@ -4,6 +4,7 @@ import Link from 'next/link';
 // Import Components
 // Import Functions & Actions & Hooks & State
 import { cn } from '@/lib/utils';
+import TextScroll from './text_scroll/TextScroll';
 // Import Data
 // Import Assets & Icons
 
@@ -53,12 +54,12 @@ export default function Breaker_LG_3Features({
 					</p>
 					<p className="text-sm italic mt-2 max-w-2xl mx-auto">
 					  Welcome to the Finance Chest Marketplace! To maintain the highest quality and ensure a seamless experience for all users, please follow these submission guidelines carefully.
-					</p>
-
+					</p>					
 <h2 className="text-5xl mt-4 max-w-2xl mx-auto"></h2>
 
 				</div>
 				<div className="mx-auto mt-12">
+				<TextScroll />
 					<div className="grid grid-cols-1 gap-x-16 gap-y-16 lg:grid-cols-2">
 						{features.length > 1 &&
 							features.map((feature) => (
