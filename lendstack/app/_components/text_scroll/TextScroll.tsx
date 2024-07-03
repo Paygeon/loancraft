@@ -10,10 +10,9 @@ const TextScroll: React.FC = () => {
         <p className="loopy">
           <span>- Single, utility components<br/>
           - Simple setup guidelines<br/>
-          - Unique styles<br/>
+          - Unique & responsive<br/>
           - No self promotion<br/>
-          - Built for API integration<br/>
-          - Mobile Responsive</span>
+          - Built for API integration</span>
         </p>
       </section>
     </main>
