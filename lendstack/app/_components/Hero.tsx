@@ -18,8 +18,7 @@ export default function Hero({ className }: { className?: string }) {
 	return (
 <div
   key="1"
-  className="relative mt-0 flex flex-col items-center justify-center overflow-hidden bg-white px-4 pb-48 pt-12 md:-mt-2 md:px-12 md:pb-56 md:pt-32 snipcss-H2kNa"
->
+  className={cn('dark:bg-black relative mt-0 flex flex-col items-center justify-center overflow-hidden bg-white px-4 pb-48 pt-12 md:-mt-2 md:px-12 md:pb-56 md:pt-32 snipcss-H2kNa', className)}>
   <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 md:grid-cols-2 md:gap-8">
     <div className="relative z-10 space-y-4 pb-12 md:pb-0">
       <span
@@ -33,7 +32,7 @@ export default function Hero({ className }: { className?: string }) {
         />
       </span>
       <h1
-        className="max-w-md text-5xl font-extrabold leading-[1.1] text-neutral-950 sm:max-w-lg lg:max-w-xl lg:text-6xl lg:leading-[1.1] style-WZqKO"
+        className="max-w-md text-5xl font-extrabold leading-[1.1]  text-gray-900 dark:text-white sm:max-w-lg lg:max-w-xl lg:text-6xl lg:leading-[1.1] style-WZqKO"
         id="style-WZqKO"
       >
         <span>

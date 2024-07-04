@@ -62,7 +62,8 @@ export default function Breaker_LG_3Features({
 				<TextScroll />
 					<div className="grid grid-cols-1 gap-x-16 gap-y-16 lg:grid-cols-2">
 						{features.length > 1 &&
-							features.map((feature) => (
+		
+		features.map((feature) => (
 								<div key={feature.name} className="flex flex-col text-center">
 									<div className="mx-auto font-semibold text-xl leading-9 text-center">
 										{feature.name}

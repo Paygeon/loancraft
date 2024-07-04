@@ -35,7 +35,7 @@ export default async function AboutPage() {
             <div className="md:w-1/2">
               <h2 className="text-lg font-semibold dark:text-white">Our Mission</h2>
               <p className="py-2 dark:text-white">
-                At [Platform Name], we are dedicated to providing a comprehensive suite of tools and resources to help you create your own financial features or platforms quickly and efficiently. Whether you are a developer, designer, or both, our platform offers a variety of code snippets, GitHub repositories, and widgets to accelerate your development process.
+                At Finance Chest, we are dedicated to providing a comprehensive suite of tools and resources to help you create your own financial features or platforms quickly and efficiently. Whether you are a developer, designer, or both, our platform offers a variety of code snippets, GitHub repositories, and widgets to accelerate your development process.
               </p>
             </div>
             <div className="md:w-1/2 md:pl-8">
@@ -66,7 +66,7 @@ export default async function AboutPage() {
                 Join our growing community of developers and designers who are leveraging our open-source platform to innovate and create impactful financial solutions. Contribute to our projects, share your ideas, and collaborate with like-minded professionals.
               </p>
               <p className="py-2 dark:text-white">
-                Get started today and see how [Platform Name] can transform your development workflow.
+                Get started today and see how Finance Chest can transform your development workflow.
               </p>
             </div>
             <div className="md:w-1/2 md:pl-8">

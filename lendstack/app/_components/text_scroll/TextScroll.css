@@ -1,3 +1,6 @@
+body {
+  overflow-x: hidden;
+}
 
 :root {
     --bg: hsl(0 0% 2%);

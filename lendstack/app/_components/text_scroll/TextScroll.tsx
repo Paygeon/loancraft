@@ -11,7 +11,6 @@ const TextScroll: React.FC = () => {
           <span>- Single, utility components<br/>
           - Simple setup guidelines<br/>
           - Unique & responsive<br/>
-          - No self promotion<br/>
           - Built for API integration</span>
         </p>
       </section>

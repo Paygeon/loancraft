@@ -69,3 +69,7 @@
   .animate-skew-scroll {
     animation: skew-scroll 20s linear infinite
   }
+
+  body {
+    overflow-x: hidden;
+}
