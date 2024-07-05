@@ -171,7 +171,7 @@ const CheckForm: React.FC = () => {
                     difficult to replicate <small>image</small>
                   </li>
                   <li>
-                    VoidPantograph&trade;: "VOID" appears
+                    VoidPantograph&trade;: &quot;VOID&quot; appears
                     <br />
                     when copied
                   </li>
