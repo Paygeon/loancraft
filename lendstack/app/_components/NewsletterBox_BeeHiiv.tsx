@@ -59,6 +59,7 @@ export default function NewsletterBox_BeeHiiv({
 						url={process.env.NEXT_PUBLIC_BEEHIIV_EMBED_URL as string}
 						data-test-id="beehiiv-embed"
 						height="52"
+						scrolling="no"
 					/>
 				) : (
 					<CookieConsentButton_Accept buttonText="Accept Cookies to display" />
@@ -101,6 +102,7 @@ export default function NewsletterBox_BeeHiiv({
 								url={process.env.NEXT_PUBLIC_BEEHIIV_EMBED_URL as string}
 								data-test-id="beehiiv-embed"
 								className="h-16 w-full"
+								scrolling="no"
 							/>
 						) : (
 							<CookieConsentButton_Accept

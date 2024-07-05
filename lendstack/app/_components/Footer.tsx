@@ -178,7 +178,7 @@ export default function Footer() {
 				</div>
 
 				<PortfolioLinkBar
-					title="Need a Domain to your Website?"
+					title="Check out our other fintech masterpieces!"
 					linkList={FOOTER_EXTERNAL_LINK_LIST}
 				/>
 

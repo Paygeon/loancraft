@@ -498,7 +498,7 @@ export default function Hero({ className }: { className?: string }) {
                         >
                           <g clipPath="url(#clip0_1077_28)">
                             <path
-                              className="fill-indigo-500 transition-colors group-hover:fill-indigo-600"
+                              className="fill-slate-500 transition-colors group-hover:fill-slate-600"
                               clipRule="evenodd"
                               d="M5.4 0H0V5.4C0 2.41765 2.41766 0 5.4 0Z"
                               fillRule="evenodd"
@@ -1192,7 +1192,7 @@ export default function Hero({ className }: { className?: string }) {
                   </defs>
                 </svg>
                 <div
-                  className="absolute top-full h-2 w-2 rounded-full bg-indigo-500 transition-colors group-hover:bg-indigo-600 style-sIb5M"
+                  className="absolute top-full h-2 w-2 rounded-full bg-yellow-500 transition-colors group-hover:bg-indigo-600 style-sIb5M"
                   id="style-sIb5M"
                 />
               </div>
@@ -1423,7 +1423,7 @@ export default function Hero({ className }: { className?: string }) {
                   </defs>
                 </svg>
                 <div
-                  className="absolute top-full h-2 w-2 rounded-full bg-indigo-500 transition-colors group-hover:bg-indigo-600 style-PTz21"
+                  className="absolute top-full h-2 w-2 rounded-full bg-slate-500 transition-colors group-hover:bg-indigo-600 style-PTz21"
                   id="style-PTz21"
                 />
               </div>
@@ -1561,8 +1561,8 @@ export default function Hero({ className }: { className?: string }) {
       </div>
     </div>
   </div>
-  <div className="absolute bottom-0 right-0 h-[725px] w-full overflow-hidden border-b-2 border-t-2 border-neutral-950 bg-indigo-300 md:top-0 md:h-auto md:w-1/2 md:border-l-2">
-    <div
+  <div className="absolute bottom-0 right-0 h-[725px] w-full overflow-hidden border-b-2 border-t-2 border-neutral-950 bg-custom-gradient md:top-0 md:h-auto md:w-1/2 md:border-l-2">
+  <div
       className="absolute -bottom-8 -top-8 left-0 right-0 bg-grid-neutral-950 style-ZkXOM"
       id="style-ZkXOM"
     />

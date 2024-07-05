@@ -161,16 +161,16 @@ export const FOOTER_SLOGAN: string =
 
 export const FOOTER_EXTERNAL_LINK_LIST: LinkListItem[] = [
 	{
-		label: 'Boilerplates @ financechest.io',
-		href: 'https://financechest.io',
+		label: 'Rewards for paying your invoices @ parliamint.club',
+		href: 'https://parliamint.club',
 	},
 	{
-		label: 'Domain Hacks @ Domainhacks.info',
-		href: 'https://domainhacks.info',
+		label: 'Embedded Lending @ Coming Soon',
+		href: '#',
 	},
 	{
-		label: 'Expired .COM Domains @ DroppedHub.com',
-		href: 'https://droppedhub.com',
+		label: 'Fintech Startup Deals @ Coming Soon',
+		href: '#',
 	},
 ];
 
