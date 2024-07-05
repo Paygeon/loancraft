@@ -110,4 +110,13 @@ export const TECH_STACK: TechStackObject[] = [
 			'CSS3 is the latest evolution of the Cascading Style Sheets (CSS) language1. It extends CSS2.1 and introduces new features such as rounded corners, shadows, gradients, transitions, animations, and new layouts like multi-columns, flexible box, and grid layouts1. CSS3 is used to style and organize the layout of web pages2.',
 		TechStackSVGComponent: Icons.CSS,
 	},
+	{
+		techStackName: 'Corpay',
+		techStackURL: 'https://corpay.com/',
+		techStackCategory: 'Application Programing Interface',
+		techStackDescription:
+			'Corpay is a global corporate payments company that provides solutions to control expense-related purchasing and payment processes123. It offers services such as invoice automation, payments automation, currency risk management, and expense management.',
+		TechStackSVGComponent: Icons.Corpay,
+	},
+	
 ];
