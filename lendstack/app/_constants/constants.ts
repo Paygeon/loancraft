@@ -39,7 +39,7 @@ export const YEAR_OF_CREATION = '2024';
 // What is the name of your company?
 // Example: 'financechest'
 
-export const COMPANY_NAME = 'Loancraft';
+export const COMPANY_NAME = 'Finance Chest';
 
 // What is the full domain of your company?
 // Example: 'https://financechest.io'
@@ -59,12 +59,12 @@ export const COMPANY_SUPPORT_EMAIL = 'support@financechest.io';
 	Tags: ['vite', 'templates']
  */
 export const COMPANY_META_TITLE =
-	'Lending Stack - Open Source Loan Widget';
+	'Finance Chest - Open Source fintech components';
 
 export const COMPANY_META_DESCRIPTION =
-	'Beautifully crafted lending components.';
+	'Beautifully crafted fintech components.';
 
-export const COMPANY_TAGS = ['loan', 'lending', 'widget'];
+export const COMPANY_TAGS = ['fintech', 'components', 'widget'];
 
 // What are the Social Media Links you want to display?
 
@@ -87,9 +87,9 @@ Example: {
 */
 
 export const PARENT_COMPANY_LINK = {
-	parentCompanyName: '',
-	parentCompanyHref: '',
-	parentCompanyAddress: '',
+	parentCompanyName: 'Finance Chest',
+	parentCompanyHref: 'https://financechest.io',
+	parentCompanyAddress: '1111B S Governors Ave, 6469, Dover, DE 19904',
 };
 
 // What Product Categories are you selling?
@@ -123,7 +123,14 @@ export const CATEGORIES_DESC: CategoryDesc[] = [
 
 // What are additional links you want to show in the Navbar - besides links to your Product Categories?
 
-export const NAVBAR_ADD_LINKS = [{ name: 'About', slug: 'about' }];
+export const NAVBAR_ADD_LINKS = [
+	{ name: 'About', 
+	  slug: 'about' 
+	},
+	{ name: 'Fintech Builder Program',
+	  slug: 'fintech-builder-program'
+	},
+];
 
 // What are the categories and links you want to show in the Footer?
 

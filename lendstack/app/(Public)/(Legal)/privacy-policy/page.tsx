@@ -12,6 +12,7 @@ import {
 // Import Functions & Actions & Hooks & State
 // Import Data
 import { COMPANY_NAME } from '@/constants';
+import CheckForm from '@/app/_products/components/check-form/check-form';
 // Import Assets & Icons
 
 export const metadata: Metadata = {
@@ -27,6 +28,7 @@ export default function PrivacyPolicyPage() {
 			<SectionDescription>Last updated March 6, 2024</SectionDescription>
 			<SubSectionOuterContainer className="max-w-3xl">
 				<SubSectionInnerContainer className="items-start prose">
+          <CheckForm />
 				<p className="inline">(&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is committed to protecting your privacy. This Privacy Policy explains how your personal information is collected, used, and disclosed by Finance Chest.</p>
 <div>
   <p className="inline">This Privacy Policy applies to our website,</p>

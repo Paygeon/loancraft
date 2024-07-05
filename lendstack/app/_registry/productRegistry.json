@@ -1,6 +1,44 @@
 {
   "components": [
     {
+      "componentName": "Check Form Component",
+      "category": "components",
+      "slug": "check-form",
+      "shortDescription": "Check Form Component developed by Finance Chest.",
+      "longDescription": "This component was developed to calculate revenue share a fintech as a service provider will offer to a partner.",
+      "hasImage": true,
+      "imageUrl": "/img/products/Revenue Calculator.svg",
+      "imageAlt": "Check Form Component | Finance Chest",
+      "hasComponentCode": true,
+      "tags": [
+        "Calculator"
+      ],
+      "techStack": [
+        "React 18",
+        "CSS3",
+        "TypeScript",
+        "NextJs"
+      ],
+      "examples": [
+        {
+          "nameOfPage": "financechest",
+          "urlToPage": "https://financechest.io",
+          "descriptionOfUsage": "financechest is using the confetti effect after someone made a purchase!",
+          "imgageSrcOfUsage": ""
+        }
+      ],
+      "faq": [
+        {
+          "question": "What integrations come built-in with this component?",
+          "answer": "This component can be used \"as is\" and was built without any specific API integration in mind."
+        }
+      ],
+      "metaDescription": "Beautifully designed check form designed by Finance Chest",
+      "metaTitle": "Fintech Check Form Component",
+      "license": "MIT",
+      "productLine": "components"
+    },
+    {
       "componentName": "Confetti Button",
       "category": "components",
       "slug": "confetti-button",

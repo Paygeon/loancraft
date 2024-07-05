@@ -27,9 +27,9 @@ import { cn } from '@/lib/utils';
 export default function NewsletterBox_BeeHiiv({
 	size = 'lg',
 	className,
-	title = 'Excited about buttons as we are?',
-	description = 'Get the latest buttons and button news straight to your inbox.',
-	disclaimer = 'DISCLAIMER: This is the Newsletter of financechest! Powered by Beehiiv.com. Unsubscribe at anytime by clicking the unsubscribe button in any email sent to you.',
+	title = 'Want new components sent to you every week?',
+	description = 'Get the latest components & fintech news straight to your inbox.',
+	disclaimer = 'DISCLAIMER: We do NOT sell your information to 3rd parties. Unsubscribe at anytime by clicking the unsubscribe button in any email sent to you.',
 	textForPrivacyPolicy = 'Read our privacy policy',
 	linkToPrivacyPolicy = 'https://financechest.io/privacy-policy',
 }: {

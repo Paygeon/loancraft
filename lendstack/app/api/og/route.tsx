@@ -19,7 +19,7 @@ export async function GET(request: Request) {
 			searchParams.get('product')?.slice(0, 30) || `${COMPANY_NAME}`;
 		const category =
 			searchParams.get('category')?.slice(0, 30) ||
-			'React Components & Templates';
+			'Fintech Components & Templates';
 		const width = parseInt(searchParams.get('width') || '1600');
 		const height = parseInt(searchParams.get('height') || '900');
 
