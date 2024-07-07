@@ -31,23 +31,23 @@ export const METADATA_FULL: Metadata = {
 		locale: 'en_US',
 		images: [
 			{
-				url: `${COMPANY_WEBSITE_URL}/img/og_1200x630.png`,
+				url: `${COMPANY_WEBSITE_URL}/img/Social Banner1200x630.png`,
 				type: 'image',
-				alt: `${COMPANY_NAME} OG Image 1200x630`,
+				alt: `${COMPANY_NAME} Social Banner 1200x630`,
 				width: 1200,
 				height: 630,
 			},
 			{
-				url: `${COMPANY_WEBSITE_URL}/img/og_1080x1080.png`,
+				url: `${COMPANY_WEBSITE_URL}/img/Thumbnail1080x1080.png`,
 				type: 'image',
-				alt: `${COMPANY_NAME} OG Image 1080x1080`,
+				alt: `${COMPANY_NAME} Thumbnail 1080x1080`,
 				width: 1080,
 				height: 1080,
 			},
 			{
-				url: `${COMPANY_WEBSITE_URL}/img/og_1600x900.png`,
+				url: `${COMPANY_WEBSITE_URL}/img/Social Banner1600x900.png`,
 				type: 'image',
-				alt: `${COMPANY_NAME} OG Image 1600x900`,
+				alt: `${COMPANY_NAME} Social Banner 1600x900`,
 				width: 1600,
 				height: 900,
 			},
@@ -59,6 +59,6 @@ export const METADATA_FULL: Metadata = {
 		creator: CREATOR_LINK.creatorXHandle,
 		description: COMPANY_META_DESCRIPTION,
 		title: COMPANY_META_TITLE,
-		images: `${COMPANY_WEBSITE_URL}/img/og_1600x900.png`,
+		images: `${COMPANY_WEBSITE_URL}/img/Social Banner1600x900.png`,
 	},
 };

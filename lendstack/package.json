@@ -1,6 +1,6 @@
 {
-	"name": "yourcompanyname",
-	"version": "1.0.0",
+	"name": "finance-chest",
+	"version": "1.2.0",
 	"private": true,
 	"scripts": {
 		"dev": "npm run build:registry && next dev",
