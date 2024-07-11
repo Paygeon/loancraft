@@ -15,7 +15,6 @@ import { METADATA_FULL } from '@/app/_constants/seo';
 // Import Assets & Icons
 import { Inter } from 'next/font/google';
 import './globals.css';
-import CustomHead from './_components/CustomHead';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -28,7 +27,11 @@ export default async function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<CustomHead />
+		   <Script
+             async
+             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6524431799974410"
+             crossOrigin="anonymous"
+           ></Script>
 			<Script
 				defer
 				src="https://analytics.eu.umami.is/script.js"
