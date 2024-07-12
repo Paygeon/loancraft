@@ -127,9 +127,6 @@ export const NAVBAR_ADD_LINKS = [
 	{ name: 'About', 
 	  slug: 'about' 
 	},
-	{ name: 'Fintech Builder Program',
-	  slug: 'fintech-builder-program'
-	},
 ];
 
 // What are the categories and links you want to show in the Footer?
