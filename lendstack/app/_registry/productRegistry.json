@@ -163,7 +163,7 @@
       "hasImage": true,
       "imageUrl": "/img/products/lending.png",
       "imageAlt": "Loan Application | financechest",
-      "hasComponentCode": false,
+      "hasComponentCode": true,
       "tags": [
         "Lenders"
       ],

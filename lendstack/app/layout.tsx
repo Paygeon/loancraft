@@ -15,9 +15,7 @@ import { METADATA_FULL } from '@/app/_constants/seo';
 // Import Assets & Icons
 import { Inter } from 'next/font/google';
 import './globals.css';
-import {
-	ClerkProvider
-  } from '@clerk/nextjs'
+import { ClerkProvider } from '@clerk/nextjs';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -29,17 +27,19 @@ export default async function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<ClerkProvider>
-			
-            <Script
+        <ClerkProvider
+		publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+		signInUrl={process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL}
+		signUpUrl={process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL}
+		>
+		<html lang="en">
+		   <Script
                 src="https://d2bttqbsvfwlg9.cloudfront.net/widget.js"
                 data-tabs="Start with our tool, General, Product, Knowledge Hub"
                 data-channels="What's new, Announcements, Help center, For developers, Bugs, Discussions, Onboarding, Product feedback, Feature Suggestions"
                 data-community-id="407"
                 data-public-base-img-url="https://d34zu6t0zlvykw.cloudfront.net/"
             ></Script>
-        
-		<html lang="en">
 		   <Script
              async
              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6524431799974410"

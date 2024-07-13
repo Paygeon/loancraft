@@ -7,7 +7,7 @@ longDescription: "Beautifully designed custom loan application for brokers, cons
 hasImage: true
 imageUrl: /img/products/lending.png
 imageAlt: Loan Application | financechest
-hasComponentCode: false
+hasComponentCode: true
 tags: ['Lenders']
 techStack: ['React', 'Tailwind', 'shadcn/ui']
 examples: [{nameOfPage: 'financechest', urlToPage: 'https://financechest.io', descriptionOfUsage: 'financechest is using the confetti effect after someone made a purchase!', imgageSrcOfUsage: ''}]
@@ -20,54 +20,70 @@ license: MIT
 <SubSectionOuterContainer id="Docs">
 <SubSectionTitle>Step-By-Step Guide</SubSectionTitle>
 <SubSectionInnerContainer  className="border-l-2 border-gray-300 space-y-12 max-w-5xl mt-4 px-1 pl-10 items-start overflow-x-hidden">
-<HowToStep index='1' title="Install Dependencies">
+<HowToStep index='1' title="Add script before the </head> tag">
 
 
-<CodeBlock fileName="cli">
+<CodeBlock fileName="index.html">
 
-```bash
-npx finchest@latest
+```html
+<script src="pa.financechest.io/dist/loanwidget.js"></script>
 ```
 
 </CodeBlock>
 
-Loan-Widget by Finance Chest - Follow instructions by [finchest - loan-widget](https://www.npmjs.com/package/loan-frontend)
+<br/>
+Loan-Widget by Finance Chest - Follow instructions by [finchest - loan-widget](https://www.npmjs.com/package/loan-frontend) for how to input the configurations.
 
-<CodeBlock fileName="cli">
-```bash
-finchest loan-widget@latest
+<CodeBlock fileName="index.html">
+```html
+<script>
+var handler = LoanWidgetLibrary.create({
+        partnerId: 'partner1',
+        themeColor: '#007bff',
+        partnerLogo: './logo192.png',
+        fontColor: '#784523',
+        typography: 'Arial, sans-serif',
+        mode: 'light',
+      });
+      handler.initializeButton("#start");
+</script>
+```
+</CodeBlock>
+
+<br/>
+Add the html code anywhere in your website or app you want to display the button at.
+<CodeBlock fileName="index.html">
+```html
+ <button id="start">Open Loan Application Modal</button>
 ```
 </CodeBlock>
 
 </HowToStep>
 
-<HowToStep index='2' title="Use in your App">
-Import the LoanWidget and replace "YOUR_PARTNER_ID" with the business name you typed during the package installation
+<HowToStep index='2' title="(Optional) Add CSS styling">
 
-<CodeBlock fileName="page.tsx">
-```tsx
-export default function Page() {
-	return (
-		<div className='relative dark:bg-black max-w-5xl mx-auto'>
-			<div className="mx-auto max-w-7xl py-16">
-				<div className="mx-auto text-center">
-					<h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl max-w-2xl mx-auto">
-						Buttons Rule The World
-					</h1>
-
-					<p className="mt-6 text-lg leading-8 text-muted-foreground dark:text-zinc-200 max-w-4xl mx-auto">
-						We knead the code and bake the pixels to perfection to serve you the
-						most delightful online buttons - LIKE, SUBMIT, and everything in
-						between.
-					</p>
-					<div className="mt-10 flex items-center justify-center gap-x-6">
-						<LoanWidget partnerId={"YOUR_PARTNER_ID"} />
-					</div>
-				</div>
-			</div>
-		</div>
-	);
-}
+<CodeBlock fileName="style.css">
+```css
+body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: darkgrey;
+      }
+      #start {
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        background-color: green;
+        color: white;
+        font-weight: bold;
+      }
+      #start:hover {
+        background-color: lightgreen;
+        color: black;
+      }
 ```
 
 </CodeBlock>

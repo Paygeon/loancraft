@@ -2,7 +2,7 @@
 import { clerkMiddleware } from '@clerk/nextjs/server';
 import { NextRequest, NextResponse } from 'next/server';
 
-const publicRoutes = ['/sign-in', '/sign-up'];
+const publicRoutes = ['https://next-hyena-13.accounts.dev/sign-in', 'https://next-hyena-13.accounts.dev/sign-up'];
 
 export default async function handler(req: NextRequest, event?: any) {
   const clerkResponse = await clerkMiddleware()(req, event);
@@ -14,7 +14,7 @@ export default async function handler(req: NextRequest, event?: any) {
 
   // Check if clerkResponse exists and has a userId
   if (!clerkResponse || !('userId' in clerkResponse)) {
-    const signInUrl = new URL('/sign-in', req.url);
+    const signInUrl = new URL('https://next-hyena-13.accounts.dev/sign-in', req.url);
     return NextResponse.redirect(signInUrl);
   }
 
@@ -25,6 +25,5 @@ export default async function handler(req: NextRequest, event?: any) {
 export const config = {
   matcher: [
     "/(api|trpc)(.*)", // Match all API and trpc routes
-    "/fintech",        // Match the /fintech route
   ],
 };
