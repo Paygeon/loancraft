@@ -6,6 +6,7 @@ import Script from 'next/script';
 import CookieConsentBanner from '@/components/CookieConsentBanner';
 import StickyTopBanner from '@/components/StickyTopBanner';
 import Navbar from '@/components/Navbar';
+import { Analytics } from "@vercel/analytics/react";
 import Footer from '@/components/Footer';
 import { Toaster } from '@/ui/Toaster';
 // Import Functions & Actions & Hooks & State
@@ -27,6 +28,7 @@ export default async function RootLayout({
 }>) {
 	return (
 		<html lang="en">
+		   <Analytics />
 		   <Script
                 src="https://d2bttqbsvfwlg9.cloudfront.net/widget.js"
                 data-tabs="Start with our tool, General, Product, Knowledge Hub"
