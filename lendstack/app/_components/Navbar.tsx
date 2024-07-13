@@ -4,7 +4,6 @@
 import { Disclosure } from '@headlessui/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
 import { Badge } from '@/ui/Badge';
 import { COMPANY_NAME, CATEGORIES_DESC, NAVBAR_ADD_LINKS } from '@/constants';
 import { MenuIcon, XIcon, MoonIcon, SunIcon } from 'lucide-react';
@@ -137,13 +136,6 @@ export default function Navbar() {
                                     <ModeToggle />
                                 </div>
                             </div>
-                            {/* SignedOut and SignedIn components */}
-                            <SignedOut>
-                                <SignInButton />
-                            </SignedOut>
-                            <SignedIn>
-                                <UserButton />
-                            </SignedIn>
                         </div>
                     </div>
                     {/* Mobile menu, show/hide based on menu open state */}
