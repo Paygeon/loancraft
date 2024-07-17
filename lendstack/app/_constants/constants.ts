@@ -27,7 +27,7 @@ Example: {
 
 export const CREATOR_LINK = {
 	creatorName: 'Vashon Gonzales',
-	creatorHref: 'https://loancraft.club',
+	creatorHref: 'https://financechest.io',
 	creatorXHandle: '@VashonG',
 };
 
@@ -39,7 +39,7 @@ export const YEAR_OF_CREATION = '2024';
 // What is the name of your company?
 // Example: 'financechest'
 
-export const COMPANY_NAME = 'Finance Chest';
+export const COMPANY_NAME = 'Carat Card Club';
 
 // What is the full domain of your company?
 // Example: 'https://financechest.io'
