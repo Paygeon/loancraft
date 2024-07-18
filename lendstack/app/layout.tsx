@@ -29,6 +29,17 @@ export default async function RootLayout({
 	return (
 		<html lang="en">
 		   <Analytics />
+		   <script async src="https://www.googletagmanager.com/gtag/js?id=G-L3LQQQPSN5"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-L3LQQQPSN5');
+            `,
+          }}
+        />
 		   <Script
                 src="https://d2bttqbsvfwlg9.cloudfront.net/widget.js"
                 data-tabs="Start with our tool, General, Product, Knowledge Hub"
