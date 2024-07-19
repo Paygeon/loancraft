@@ -14,11 +14,6 @@ import { CATEGORIES_DESC, GENERAL_FAQS } from '@/constants';
 import { BentoGridThirdDemo } from './_components/BentoGridThirdDemo';
 import CombinedTitleSubtitle from './_components/_ui/Title';
 import TextScroll from './_components/text_scroll/TextScroll';
-import dynamic from 'next/dynamic';
-
-const DynamicWidgetScript = dynamic(() => import('@/components/WidgetScript'), {
-  ssr: false,
-});
 
 // Import Assets & Icons
 
@@ -44,7 +39,6 @@ export default function Home() {
 			<Breaker_LG_3Features features={CATEGORIES_DESC} />
 			<FAQ faqs={GENERAL_FAQS} className="text-center max-w-3xl mt-8" />
 			<NewsletterBox_BeeHiiv />
-			<DynamicWidgetScript />
 		</div>
 	);
 }

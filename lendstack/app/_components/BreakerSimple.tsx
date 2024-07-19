@@ -27,38 +27,19 @@ type SectionBreakerProps = {
  * @returns The rendered section breaker component.
  */
 export default function BreakerSimple({
-	title = 'Fun Fact',
-	description = 'There are a lot of buttons in the world!!',
 	linkHref,
 	linkCTA,
 	className,
 }: SectionBreakerProps) {
 	return (
-		<div className="mx-auto w-full my-4">
-			<div
-				className={cn(
-					'relative isolate overflow-hidden bg-muted dark:bg-black dark:border-b dark:border-t dark:text-white px-6 py-16 text-center',
-					className
-				)}
-			>
-				<div className="max-w-5xl mx-auto">
-					<h2 className="mx-auto max-w-2xl text-2xl font-bold">{title}</h2>
-					<p className="mx-auto mt-6 max-w-2xl text-lg">{description}</p>
-					{linkHref && linkCTA && (
 						<div className="mt-10 flex items-center justify-center gap-x-6">
-							<Link
-								href={linkHref}
-								className={cn(
-									buttonVariants({ variant: 'default' }),
-									'mx-auto text-xl font-semibold'
-								)}
-							>
-								{linkCTA}
-							</Link>
+							<iframe
+								title="FINANCE_CHEST.IO checkout widget"
+								src="https://nas.io/checkout-widget?communityCode=FINANCE_CHEST.IO&communitySlug=%2Ffinance-chest.io&buttonText=Signup!&buttonTextColorHex=%23000&buttonBgColorHex=%23fccb1d&widgetTheme=dark&backgroundColorHex=%23000"
+								width="1750"
+								height="330"
+								frameBorder="0"
+								referrerPolicy="no-referrer"
+							></iframe>
 						</div>
 					)}
-				</div>
-			</div>
-		</div>
-	);
-}

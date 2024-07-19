@@ -7,7 +7,8 @@ import { cn } from '@/lib/utils';
 // Import Data
 // Import Assets & Icons
 import '@/styles/AmazonText.css';
-import PepperdineBadge from './PepperdineBadge';
+import PepperdineBadge from './badges/PepperdineBadge';
+import SideProjectors from './badges/SideProjectors';
 /**
  * Renders the Hero component.
  *
@@ -114,6 +115,7 @@ export default function Hero({ className }: { className?: string }) {
       </div>
       <br/>
       <PepperdineBadge />
+      <SideProjectors />
     </div>
     
     <div className="relative right-200 z-0 h-[500px] w-full md:h-auto">
